@@ -12,7 +12,7 @@
   width: 100%;
   background-color: white;
   display: flex;
-  position: relative;
+  /* position: relative; */
 }
 
 .left-section {
@@ -29,8 +29,6 @@
   font-size: 1.5rem;
 }
 
-
-
 .parameters {
   margin: 0 auto;
   height: 200px;
@@ -41,8 +39,8 @@
   gap: 10px;
 }
 
-.generate-btn{
-  background-color: darkgreen;
+.generate-btn {
+  background-color: #0e6efc;
   color: white;
   border: none;
   padding: 9px;
@@ -50,8 +48,8 @@
   transition: background-color 0.2s;
 }
 
-.generate-btn:hover{
-  background-color: rgb(1, 32, 1);
+.generate-btn:hover {
+  background-color: #0b57c9;
 }
 
 button {
@@ -59,12 +57,70 @@ button {
 }
 
 .buttons-box {
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.7rem;
   align-items: center;
+  /* background-color: gray; */
+}
+
+.buttons-box button {
+  border-radius: 7px;
+  border: none;
+  width: 60%;
+  padding: 6px;
+  transition: 0.2s;
+}
+
+.bubble {
+  background-color: #ffc107;
+}
+
+.bubble:hover {
+  background-color: #cc9a05;
+  box-shadow: 2px 2px 5px #cc9a05;
+}
+
+.selection {
+  background-color: #6c757c;
+  color: rgb(231, 231, 231);
+}
+
+.selection:hover {
+  background-color: #3f4449;
+  box-shadow: 2px 2px 5px #3f4449;
+}
+
+.insertion {
+  background-color: #1a8755;
+  color: rgb(231, 231, 231);
+}
+
+.insertion:hover {
+  background-color: #105434;
+  box-shadow: 2px 2px 5px #105434;
+}
+
+.merge {
+  background-color: #d83444;
+  color: rgb(231, 231, 231);
+}
+
+.merge:hover {
+  background-color: #a42733;
+  box-shadow: 2px 2px 5px #a42733;
+}
+
+.quick {
+  background-color: #1e2225;
+  color: rgb(231, 231, 231);
+}
+
+.quick:hover {
+  background-color: #000000;
+  box-shadow: 2px 2px 5px #000;
 }
 
 .right-section {
@@ -97,7 +153,7 @@ button {
 
 .time-top {
   margin-top: 5rem;
-  background-color: rgb(137, 137, 230);
+  background-color: #829ef4;
   width: 100%;
   height: 35px;
   display: flex;
@@ -138,7 +194,7 @@ li {
 
 .space-top {
   margin-top: 1rem;
-  background-color: rgb(142, 236, 123);
+  background-color: #98c4b7;
   width: 100%;
   height: 35px;
   display: flex;
@@ -158,4 +214,3 @@ li {
   font-size: 1rem;
   margin-bottom: 5px;
 }
-
