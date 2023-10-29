@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorting Visualiser</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <section class="left-section">
-            <div class="title">
+      <section class="left-section">
+        <div class="title">
+          <h1>Sorting Visualiser</h1>
+        </div>
 
-            </div>
+        <div class="parameters">
+          <p>Size of the array:</p>
+          <input type="range" min="1" max="100" />
 
-            <div class="parameters">
+          <button>Generate new array!</button>
 
-            </div>
+          <p>Speed of the algorithm</p>
+          <input type="range" min="1" max="10" />
+        </div>
 
-            <div class="buttons-box">
+        <div class="buttons-box">
+          <button>Bubble Sort</button>
+          <button>Selection Sort</button>
+          <button>Insertion Sort</button>
+          <button>Merge Sort</button>
+          <button>Quick Sort</button>
+        </div>
+      </section>
 
-            </div>
+      <section class="right-section">
+        <div class="legend"></div>
 
-        </section>
+        <div class="sorting-window"></div>
 
-        <section class="right-section">
-
-            <div class="legend">
-
-            </div>
-
-            <div class="sorting-window">
-
-            </div>
-
-            <div class="details">
-
-            </div>
-
-        </section>
-
+        <div class="details"></div>
+      </section>
     </div>
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

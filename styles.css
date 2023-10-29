@@ -8,4 +8,56 @@
   height: 100vh;
   width: 100%;
   background-color: white;
+  display: flex;
+  position: relative;
+}
+
+.left-section {
+  height: 100vh;
+  width: 20%;
+  /* background-color: red; */
+  border-right: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: rebeccapurple;
+
+}
+
+.title{
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+button{
+  cursor: pointer;
+}
+
+.right-section{
+  width: 100%;
+  background-color: green;
+  position: absolute;
+}
+
+.parameters{
+  margin : 0 auto ;
+  height: 200px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 10px;
+}
+
+
+.buttons-box{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.7rem;
+  align-items: center;
 }
