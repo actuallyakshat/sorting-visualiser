@@ -52,6 +52,25 @@
   background-color: #0b57c9;
 }
 
+/* .slider {
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  margin-top: -5px;
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #ffbfa9;
+}
+
+.slider::-webkit-slider-runnable-track {
+  background-color: #ff6969;
+  border-radius: 8px;
+  height: 5px;
+} */
+
 button {
   cursor: pointer;
 }
