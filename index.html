@@ -16,12 +16,12 @@
 
         <div class="parameters">
           <p style="font-weight: bold">Size of the array:</p>
-          <input type="range" min="1" max="100" />
+          <input class="slider" type="range" min="1" max="100" />
 
           <button class="generate-btn">Generate New Array!</button>
 
           <p style="font-weight: bold">Speed of the algorithm:</p>
-          <input type="range" min="1" max="10" />
+          <input class="slider" type="range" min="1" max="10" step="0.1" />
         </div>
 
         <div class="buttons-box">
@@ -35,7 +35,18 @@
 
       <section class="right-section">
         <div class="container">
-          <div class="legend"></div>
+          <div class="legend">
+            <div class="legend-items">
+              <div class="unsorted-legend"></div>
+              <p>Unsorted</p>
+              <div class="sorted-legend"></div>
+              <p>Sorted</p>
+              <div class="comparison-yellow-legend"></div>
+              <p style="margin: 0px 0px">&</p>
+              <div class="comparison-red-legend"></div>
+              <p>Comparison</p>
+            </div>
+          </div>
 
           <div class="sorting-window"></div>
 
