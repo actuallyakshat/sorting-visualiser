@@ -134,11 +134,47 @@ button {
 }
 
 .legend {
+  height: 100px;
+  /* background-color: pink; */
+  position: relative;
+}
+
+.legend-items {
+  display: flex;
+  position: absolute;
+  top: 3.75rem;
+}
+
+.legend-items div {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  /* background-color: pink; */
+}
+
+.legend-items p {
+  margin: 0px 10px;
+}
+
+.unsorted-legend {
+  background-color: black;
+}
+
+.sorted-legend {
+  background-color: green;
+}
+
+.comparison-yellow-legend {
+  background-color: rgb(251, 251, 0);
+}
+
+.comparison-red-legend {
+  background-color: red;
 }
 
 .sorting-window {
-  background-color: yellow;
-  height: 600px;
+  background-color: gray;
+  height: 500px;
 }
 
 .details {
