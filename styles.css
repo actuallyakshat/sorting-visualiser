@@ -52,7 +52,7 @@
   background-color: #0b57c9;
 }
 
-/* .slider {
+.slider {
   appearance: none;
 }
 
@@ -69,7 +69,7 @@
   background-color: #ff6969;
   border-radius: 8px;
   height: 5px;
-} */
+}
 
 button {
   cursor: pointer;
