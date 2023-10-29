@@ -29,6 +29,8 @@
   font-size: 1.5rem;
 }
 
+
+
 .parameters {
   margin: 0 auto;
   height: 200px;
@@ -37,6 +39,19 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+}
+
+.generate-btn{
+  background-color: darkgreen;
+  color: white;
+  border: none;
+  padding: 9px;
+  border-radius: 7px;
+  transition: background-color 0.2s;
+}
+
+.generate-btn:hover{
+  background-color: rgb(1, 32, 1);
 }
 
 button {
@@ -143,3 +158,4 @@ li {
   font-size: 1rem;
   margin-bottom: 5px;
 }
+
