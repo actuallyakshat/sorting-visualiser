@@ -163,12 +163,13 @@
 
 .legend {
   height: 100px;
-
+  /* display: flex; */
   position: relative;
 }
 
 .legend-items {
   display: flex;
+  /* display: inline-block; */
   position: absolute;
   top: 3.75rem;
 }
@@ -197,6 +198,35 @@
 
 .comparison-red-legend {
   background-color: red;
+}
+
+.toggle-switch {
+  position: absolute;
+  left: 75rem;
+  top: 4rem;
+}
+
+.toggle-slider {
+  height: 1.85rem;
+  width: 3.5rem;
+  background-color: #222;
+  border-radius: 30px;
+  position: relative;
+}
+
+.toggle-thumb {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #505050;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  transition: 0.3s;
+}
+
+.toggle-on {
+  left: 1.7rem;
 }
 
 .sorting-window {
