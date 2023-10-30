@@ -1,8 +1,8 @@
 const sortingWindow = document.querySelector(".sorting-window");
+const sortingButtons = document.querySelectorAll(".btn");
+const arr = [];
 let determineSpeed = document.querySelector(".speed-slider").value;
 let n = document.querySelector(".size-slider").value;
-const arr = [];
-
 generateArray();
 updateSpeed();
 document
@@ -11,26 +11,7 @@ document
 
 document.querySelector(".speed-slider").addEventListener("input", updateSpeed);
 
-function updateSpeed() {
-  determineSpeed = document.querySelector(".speed-slider").value;
-  switch (determineSpeed) {
-    case "1":
-      animationSpeed = 100;
-      break;
-    case "2":
-      animationSpeed = 80;
-      break;
-    case "3":
-      animationSpeed = 60;
-      break;
-    case "4":
-      animationSpeed = 40;
-      break;
-    case "5":
-      animationSpeed = 20;
-      break;
-  }
-}
+
 
 function generateArray() {
   sortingWindow.innerHTML = "";
@@ -46,6 +27,27 @@ function updateArraySize() {
   generateArray();
 }
 
+function updateSpeed() {
+  determineSpeed = document.querySelector(".speed-slider").value;
+  switch (determineSpeed) {
+    case "1":
+      animationSpeed = 120;
+      break;
+    case "2":
+      animationSpeed = 80;
+      break;
+    case "3":
+      animationSpeed = 50;
+      break;
+    case "4":
+      animationSpeed = 30;
+      break;
+    case "5":
+      animationSpeed = 10;
+      break;
+  }
+}
+
 function showBars(indicies) {
   sortingWindow.innerHTML = "";
   for (let i = 0; i < n; i++) {
@@ -57,6 +59,25 @@ function showBars(indicies) {
     }
     sortingWindow.appendChild(bar);
   }
+}
+
+function disableButtons() {
+  sortingButtons.forEach((button) => {
+    button.classList.add("btn-disable");
+    button.disabled = true;
+  });
+
+  document.querySelector(".size-slider").disabled = true;
+  document.querySelector(".speed-slider").disabled = true;
+}
+
+function enableButtons() {
+  sortingButtons.forEach((button) => {
+    button.disabled = false;
+    button.classList.remove("btn-disable");
+  });
+  document.querySelector(".size-slider").disabled = false;
+  document.querySelector(".speed-slider").disabled = false;
 }
 
 //bubble sort section starts
@@ -77,6 +98,7 @@ function bubbleSort(arr) {
 }
 
 function playBubble() {
+  disableButtons();
   const copyArray = [...arr];
   updateBubbleTime();
   updateBubbleSpace();
@@ -87,7 +109,7 @@ function playBubble() {
 function animateBubbleSort(swaps, speed) {
   if (swaps.length == 0) {
     showBars();
-    return;
+    enableButtons();
   }
 
   const [i, j] = swaps.shift();

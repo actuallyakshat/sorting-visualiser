@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,400;1,500&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -36,9 +36,23 @@
   text-align: center;
   margin-top: 1rem;
   font-size: 1.5rem;
+  text-transform: uppercase;
   /* position: absolute;
   top: 3rem;
   left: 5.5rem; */
+}
+
+#title-sorting{
+  font-family: 'Raleway', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#title-visualiser{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
 }
 
 .parameters {
@@ -51,18 +65,22 @@
   gap: 1rem;
 }
 
-.generate-btn {
-  background-color: #125ac6;
-  color: white;
+.reset-button{
+  padding: 10px;
   border: none;
-  padding: 9px;
   border-radius: 7px;
+  background-color: #0c227b;
+  font-size: 15px;
+  color: white;
   font-weight: 400;
-  transition: background-color 0.2s;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.2ch;
 }
 
-.generate-btn:hover {
-  background-color: #0f418d;
+.reset-button:hover{
+  background-color: #04103f;
+  box-shadow: 2px 2px 3px #04103f;
 }
 
 .slider {
@@ -100,6 +118,11 @@
   padding: 10px;
   transition: 0.2s;
   font-weight: 500;
+}
+
+.btn-disable{
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .bubble {
