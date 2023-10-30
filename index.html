@@ -14,24 +14,38 @@
             <h1>Sorting</h1>
             <h5 style="font-weight: 500">Visualizer</h5>
           </div>
-  
+
           <div class="parameters">
             <p style="font-weight: bold">Size of the array:</p>
-            <input class="slider size-slider" onclick="generateArray()" type="range" min="5" max="80" value="15"/>
-  
+            <input
+              class="slider size-slider"
+              onclick="generateArray()"
+              type="range"
+              min="5"
+              max="80"
+              value="15"
+            />
+
             <p style="font-weight: bold">Speed of the algorithm:</p>
-            <input class="slider speed-slider" type="range" min="1" max="5" value="3"/>
+            <input
+              class="slider speed-slider"
+              type="range"
+              min="1"
+              max="5"
+              value="3"
+            />
           </div>
-  
+
           <div class="buttons-box">
-            <button class="btn bubble" onclick="playBubble()">Bubble Sort</button>
+            <button class="btn bubble" onclick="playBubble()">
+              Bubble Sort
+            </button>
             <button class="btn selection">Selection Sort</button>
             <button class="btn insertion">Insertion Sort</button>
             <button class="btn merge">Merge Sort</button>
             <button class="btn quick">Quick Sort</button>
           </div>
         </div>
-
       </section>
 
       <section class="right-section">
@@ -49,9 +63,7 @@
             </div>
           </div>
 
-          <div class="sorting-window">
-
-          </div>
+          <div class="sorting-window"></div>
 
           <div class="details">
             <div class="time">
@@ -80,9 +92,9 @@
 
               <div class="space-bottom">
                 <p id="first-item">Algorithm</p>
-                <div class="time-details">--</div>
-                <div class="time-details">--</div>
-                <div class="time-details">--</div>
+                <div class="space-details">--</div>
+                <div class="space-details">--</div>
+                <div class="space-details">--</div>
               </div>
             </div>
           </div>

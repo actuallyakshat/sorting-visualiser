@@ -2,7 +2,6 @@ const sortingWindow = document.querySelector(".sorting-window");
 let determineSpeed = document.querySelector(".speed-slider").value;
 let n = document.querySelector(".size-slider").value;
 
-
 const arr = [];
 
 generateArray();
@@ -54,7 +53,7 @@ function showBars(indicies) {
     const bar = document.createElement("div");
     bar.style.height = arr[i] * 100 + "%";
     bar.classList.add("bar");
-    if(indicies && indicies.includes(i)){
+    if (indicies && indicies.includes(i)) {
       bar.style.backgroundColor = "red";
     }
     sortingWindow.appendChild(bar);
@@ -80,24 +79,39 @@ function bubbleSort(arr) {
 
 function playBubble() {
   const copyArray = [...arr];
+  updateTime();
+  updateSpace();
   const swaps = bubbleSort(copyArray);
   animateBubbleSort(swaps, animationSpeed);
 }
 
 function animateBubbleSort(swaps, speed) {
-  if (swaps.length == 0){
-    showBars(); 
+  if (swaps.length == 0) {
+    showBars();
     return;
   }
 
   const [i, j] = swaps.shift();
   [arr[i], arr[j]] = [arr[j], arr[i]];
-  showBars([i,j]);
+  showBars([i, j]);
   setTimeout(function () {
     animateBubbleSort(swaps, speed);
   }, speed);
 }
 
+function updateTime() {
+  let data = document.getElementsByClassName("time-details");
+  data[0].innerHTML = "O(N)";
+  data[1].innerHTML = "O(N<sup>2</sup>)";
+  data[2].innerHTML = "O(N<sup>2</sup>)";
+}
+
+function updateSpace() {
+  let data = document.getElementsByClassName("space-details");
+  data[0].innerHTML = "O(1)";
+  data[1].innerHTML = "O(1)";
+  data[2].innerHTML = "O(1)";
+}
 //bubble sort section ends
 
 //insertion sort section starts
