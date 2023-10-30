@@ -78,8 +78,8 @@ function bubbleSort(arr) {
 
 function playBubble() {
   const copyArray = [...arr];
-  updateTime();
-  updateSpace();
+  updateBubbleTime();
+  updateBubbleSpace();
   const swaps = bubbleSort(copyArray);
   animateBubbleSort(swaps, animationSpeed);
 }
@@ -98,14 +98,14 @@ function animateBubbleSort(swaps, speed) {
   }, speed);
 }
 
-function updateTime() {
+function updateBubbleTime() {
   let data = document.getElementsByClassName("time-details");
   data[0].innerHTML = "O(N)";
   data[1].innerHTML = "O(N<sup>2</sup>)";
   data[2].innerHTML = "O(N<sup>2</sup>)";
 }
 
-function updateSpace() {
+function updateBubbleSpace() {
   let data = document.getElementsByClassName("space-details");
   data[0].innerHTML = "O(1)";
   data[1].innerHTML = "O(1)";
@@ -114,19 +114,87 @@ function updateSpace() {
 //bubble sort section ends
 
 //insertion sort section starts
+function playInsertion() {
+  updateInsertionTime();
+  updateInsertionSpace();
+}
 
+function updateInsertionTime() {
+  let data = document.getElementsByClassName("time-details");
+  data[0].innerHTML = "O(N)";
+  data[1].innerHTML = "O(N<sup>2</sup>)";
+  data[2].innerHTML = "O(N<sup>2</sup>)";
+}
+
+function updateInsertionSpace() {
+  let data = document.getElementsByClassName("space-details");
+  data[0].innerHTML = "O(1)";
+  data[1].innerHTML = "O(1)";
+  data[2].innerHTML = "O(1)";
+}
 //insertion sort section ends
 
 //selection sort section starts
+function playSelection() {
+  updateSelectionTime();
+  updateSelectionSpace();
+}
 
+function updateSelectionTime() {
+  let data = document.getElementsByClassName("time-details");
+  data[0].innerHTML = "O(N<sup>2</sup>)";
+  data[1].innerHTML = "O(N<sup>2</sup>)";
+  data[2].innerHTML = "O(N<sup>2</sup>)";
+}
+
+function updateSelectionSpace() {
+  let data = document.getElementsByClassName("space-details");
+  data[0].innerHTML = "O(1)";
+  data[1].innerHTML = "O(1)";
+  data[2].innerHTML = "O(1)";
+}
 //selection sort section ends
 
 // merge sort section starts
+function playMerge() {
+  updateMergeTime();
+  updateMergeSpace();
+}
 
+function updateMergeTime() {
+  let data = document.getElementsByClassName("time-details");
+  data[0].innerHTML = "O(N x LogN)";
+  data[1].innerHTML = "O(N x LogN)";
+  data[2].innerHTML = "O(N x LogN)";
+}
+
+function updateMergeSpace() {
+  let data = document.getElementsByClassName("space-details");
+  data[0].innerHTML = "O(N)";
+  data[1].innerHTML = "O(N)";
+  data[2].innerHTML = "O(N)";
+}
 // merge sort section ends
 
-// merge sort section starts
+// quick sort section starts
+function playQuick() {
+  updateQuickTime();
+  updateQuickSpace();
+}
 
+function updateQuickTime() {
+  let data = document.getElementsByClassName("time-details");
+  data[0].innerHTML = "O(N x LogN)";
+  data[1].innerHTML = "O(N x LogN)";
+  data[2].innerHTML = "O(N x LogN)";
+}
+
+function updateQuickSpace() {
+  let data = document.getElementsByClassName("space-details");
+  data[0].innerHTML = "O(N)";
+  data[1].innerHTML = "O(N)";
+  data[2].innerHTML = "O(N)";
+}
 // quick sort section ends
 
 /* testing the sorting algorithm's logic
