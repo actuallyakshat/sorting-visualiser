@@ -1,7 +1,6 @@
 const sortingWindow = document.querySelector(".sorting-window");
 let determineSpeed = document.querySelector(".speed-slider").value;
 let n = document.querySelector(".size-slider").value;
-
 const arr = [];
 
 generateArray();
