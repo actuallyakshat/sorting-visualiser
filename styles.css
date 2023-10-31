@@ -9,12 +9,16 @@
 
 :root {
   --document-color: #f5f5dc;
-  --font-color: #000000
-} 
+  --font-color: #000000;
+  --toggle-slider: rgb(196, 194, 194);
+  --toggle-thumb: #7e7d7d;
+}
 
 .dark-theme {
   --document-color: rgb(5, 1, 1);
-  --font-color : #ffffff
+  --font-color: #ffffff;
+  --toggle-slider: #222;
+  --toggle-thumb: #505050;
 }
 
 .wrapper {
@@ -36,7 +40,7 @@
   transition: background-color 0.5s, color 0.3s;
 }
 
-.left-section-dark{
+.left-section-dark {
   border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -245,16 +249,28 @@
 
 .toggle-slider {
   height: 1.85rem;
-  width: 3.5rem;
-  background-color: #222;
+  width: 4rem;
+  background-color: var(--toggle-slider);
   border-radius: 30px;
   position: relative;
+}
+
+.sun {
+  position: absolute;
+  left: 36px;
+  top: 14px;
+}
+
+.moon {
+  position: absolute;
+  top: 15px;
+  left: 9px;
 }
 
 .toggle-thumb {
   height: 1.6rem;
   width: 1.6rem;
-  background-color: #505050;
+  background-color: var(--toggle-thumb);
   border-radius: 50%;
   position: absolute;
   top: 2px;
@@ -263,7 +279,7 @@
 }
 
 .toggle-on {
-  left: 1.7rem;
+  left: 2.2rem;
 }
 
 .sorting-window {
@@ -277,7 +293,7 @@
   border-radius: 10px;
 }
 
-.sorting-window-dark{
+.sorting-window-dark {
   background-color: rgb(18, 18, 23);
 }
 
