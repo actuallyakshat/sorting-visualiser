@@ -11,8 +11,8 @@
       <section class="left-section">
         <div class="menu-container">
           <div class="title">
-            <h1>Sorting</h1>
-            <h5 style="font-weight: 500">Visualizer</h5>
+            <h1 id="title-sorting">Sorting</h1>
+            <h5 id="title-visualiser" style="font-weight: 500">Visualizer</h5>
           </div>
 
           <div class="parameters">
@@ -23,10 +23,10 @@
               type="range"
               min="5"
               max="80"
-              value="15"
+              value="30"
             />
 
-            <p style="font-weight: bold">Speed of the algorithm:</p>
+            <p style="font-weight: bold;">Speed of the algorithm:</p>
             <input
               class="slider speed-slider"
               type="range"
@@ -34,6 +34,8 @@
               max="5"
               value="3"
             />
+
+            <button class="btn reset-button" onclick="generateArray()">Reset Array</button>
           </div>
 
           <div class="buttons-box">
@@ -60,8 +62,6 @@
               <p>Unsorted</p>
               <div class="sorted-legend"></div>
               <p>Sorted</p>
-              <div class="comparison-yellow-legend"></div>
-              <p style="margin: 0px 0px">&</p>
               <div class="comparison-red-legend"></div>
               <p>Comparison</p>
             </div>
@@ -105,6 +105,11 @@
         </div>
       </section>
     </div>
-    <script src="script.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/bubble.js"></script>
+    <script src="./scripts/selection.js"></script>
+    <script src="./scripts/insertion.js"></script>
+    <script src="./scripts/merge.js"></script>
+    <script src="./scripts/quick.js"></script>
   </body>
 </html>
