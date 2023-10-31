@@ -126,24 +126,7 @@ function updateInsertionSpace() {
 //insertion sort section ends
 
 //selection sort section starts
-function playSelection() {
-  updateSelectionTime();
-  updateSelectionSpace();
-}
 
-function updateSelectionTime() {
-  let data = document.getElementsByClassName("time-details");
-  data[0].innerHTML = "O(N<sup>2</sup>)";
-  data[1].innerHTML = "O(N<sup>2</sup>)";
-  data[2].innerHTML = "O(N<sup>2</sup>)";
-}
-
-function updateSelectionSpace() {
-  let data = document.getElementsByClassName("space-details");
-  data[0].innerHTML = "O(1)";
-  data[1].innerHTML = "O(1)";
-  data[2].innerHTML = "O(1)";
-}
 //selection sort section ends
 
 // merge sort section starts

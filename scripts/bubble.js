@@ -27,7 +27,27 @@ async function bubbleSort() {
 
 const bubbleBtn = document.querySelector('.bubble');
 bubbleBtn.addEventListener('click', async function() {
+  playBubble();
   disableButtons();
   await bubbleSort();
   enableButtons();
 });
+
+function playBubble() {
+  updateBubbleTime();
+  updateBubbleSpace();
+}
+
+function updateBubbleTime() {
+  let data = document.getElementsByClassName("time-details");
+  data[0].innerHTML = "O(N)";
+  data[1].innerHTML = "O(N<sup>2</sup>)";
+  data[2].innerHTML = "O(N<sup>2</sup>)";
+}
+
+function updateBubbleSpace() {
+  let data = document.getElementsByClassName("space-details");
+  data[0].innerHTML = "O(1)";
+  data[1].innerHTML = "O(1)";
+  data[2].innerHTML = "O(1)";
+}
