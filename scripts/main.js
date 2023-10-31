@@ -8,9 +8,7 @@ generateArray();
 updateSpeed();
 
 //changing sliders automatically calls the updation functions
-document
-  .querySelector(".size-slider")
-  .addEventListener("input", generateArray);
+document.querySelector(".size-slider").addEventListener("input", generateArray);
 document.querySelector(".speed-slider").addEventListener("input", updateSpeed);
 
 //swap function
@@ -20,10 +18,12 @@ function swap(ele1, ele2) {
   ele2.style.height = temp;
 }
 
-function waitforme(milisec) { 
-  return new Promise(resolve => { 
-      setTimeout(() => { resolve('') }, milisec); 
-  }) 
+function waitforme(milisec) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("");
+    }, milisec);
+  });
 }
 
 //generate array function
@@ -32,20 +32,20 @@ function generateArray() {
   sortingWindow.innerHTML = "";
   arraySize = document.querySelector(".size-slider").value;
   for (let i = 0; i < arraySize; i++) {
-    // arr[i] = Math.random();
-    arr.push(Math.floor(Math.random()*100)+5);
+    arr.push(Math.floor((Math.random() * 100) + 3));
   }
 
   // creating multiple div elements using loop and adding multiple class
-  for(let i=0; i<arraySize; ++i){
-      const bar = document.createElement("div");
-      bar.style.height = arr[i] + "%";
-      bar.classList.add('bar');
-      bar.classList.add('bar-style');
-      bar.classList.add(`barNo${i}`);
-      sortingWindow.appendChild(bar);    
+  for (let i = 0; i < arraySize; ++i) {
+    const bar = document.createElement("div");
+    bar.style.height = arr[i] + "%";
+    bar.classList.add("bar");
+    bar.classList.add("bar-style");
+    bar.classList.add(`barNo${i}`);
+    sortingWindow.appendChild(bar);
   }
 }
+
 
 //update speed function
 function updateSpeed() {
@@ -76,7 +76,6 @@ function disableButtons() {
   });
 
   document.querySelector(".size-slider").disabled = true;
-  document.querySelector(".speed-slider").disabled = true;
 }
 
 function enableButtons() {
@@ -85,34 +84,7 @@ function enableButtons() {
     button.classList.remove("btn-disable");
   });
   document.querySelector(".size-slider").disabled = false;
-  document.querySelector(".speed-slider").disabled = false;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
