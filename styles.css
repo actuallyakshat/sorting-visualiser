@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,400;1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,400;1,500&family=Roboto+Mono:ital,wght@0,300;0,400;0,600;0,700;1,200;1,400;1,500&display=swap');
+
+
 * {
   padding: 0;
   margin: 0;
@@ -37,7 +40,7 @@
 }
 
 .left-section-dark{
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 .menu-container {
@@ -79,7 +82,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .reset-button {
@@ -92,7 +95,8 @@
   font-weight: 400;
   cursor: pointer;
   transition: all 0.2s;
-  letter-spacing: 0.2ch;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
 }
 
 .reset-button:hover {
@@ -104,7 +108,7 @@
   appearance: none;
 }
 
-.slider::-webkit-slider-thumb {
+/* .slider::-webkit-slider-thumb {
   margin-top: -5px;
   appearance: none;
   height: 1rem;
@@ -117,7 +121,32 @@
   background-color: #ff6969;
   border-radius: 8px;
   height: 5px;
+} */
+
+
+/* Styling for the part of the slider that is not covered (track) */
+.slider::-webkit-slider-runnable-track {
+  background-color: white; /* Color for the uncovered part of the track */
+  border-radius: 8px;
+  height: 5px;
 }
+
+/* Styling for the slider thumb (handle) */
+.slider::-webkit-slider-thumb {
+  margin-top: -5px;
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #016A70; /* Color for the slider thumb (handle) */
+}
+
+.slider::-webkit-slider-runnable-track {
+  background-color: #A2C579; /* Color for the covered part of the track */
+  border-radius: 8px;
+  height: 5px;
+}
+
 
 .buttons-box {
   display: flex;
@@ -134,7 +163,8 @@
   width: 60%;
   padding: 10px;
   transition: 0.2s;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .btn-disable {
@@ -144,6 +174,7 @@
 
 .bubble {
   background-color: #ffc107;
+  color: black;
 }
 
 .bubble:hover {
@@ -299,6 +330,10 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
+.time-dark{
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
 .time-top {
   margin-top: 5rem;
   background-color: #829ef4;
@@ -339,6 +374,9 @@ li {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
+.space-dark{
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
 .space-top {
   margin-top: 1rem;
   background-color: #98c4b7;
