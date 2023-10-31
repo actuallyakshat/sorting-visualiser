@@ -1,33 +1,55 @@
+const sortingButtons = document.querySelectorAll(".btn"); //fetching to disable and enable all buttons
+let arr = []; //we will work on this array
+let determineSpeed = document.querySelector(".speed-slider").value; //value from speed slider
+let determineSize = document.querySelector(".size-slider").value; //value from size slider
 const sortingWindow = document.querySelector(".sorting-window");
-const sortingButtons = document.querySelectorAll(".btn");
-let arr = [];
-let determineSpeed = document.querySelector(".speed-slider").value;
-let n = document.querySelector(".size-slider").value;
+
 generateArray();
 updateSpeed();
+
+//changing sliders automatically calls the updation functions
 document
   .querySelector(".size-slider")
   .addEventListener("input", updateArraySize);
-
 document.querySelector(".speed-slider").addEventListener("input", updateSpeed);
 
+//swap function
+function swap(ele1, ele2) {
+  console.log("In swap()");
 
+  let temp = ele1.style.height;
+  ele1.style.height = ele2.style.height;
+  ele2.style.height = temp;
+}
 
+//generate array function
 function generateArray() {
   arr = [];
   sortingWindow.innerHTML = "";
-  n = document.querySelector(".size-slider").value;
-  for (let i = 0; i < n; i++) {
+  determineSize = document.querySelector(".size-slider").value;
+  for (let i = 0; i < determineSize; i++) {
     arr[i] = Math.random();
   }
-  showBars();
+  const bars = document.querySelector('#bars');
+
+  // creating multiple div elements using loop and adding multiple class
+  for(let i=0; i<determineSize; ++i){
+      const bar = document.createElement("div");
+
+      bar.style.height = arr[i] * 100 + "%";
+      bar.classList.add('bar');
+      bar.classList.add('bar-style');
+      bar.classList.add(`barNo${i}`);
+      bars.appendChild(bar);    
+  }
 }
 
+//update array size function
 function updateArraySize() {
-  n = document.querySelector(".size-slider").value;
+  determineSize = document.querySelector(".size-slider").value;
   generateArray();
 }
-
+//update speed function
 function updateSpeed() {
   determineSpeed = document.querySelector(".speed-slider").value;
   switch (determineSpeed) {
@@ -49,18 +71,6 @@ function updateSpeed() {
   }
 }
 
-function showBars(move) {
-  sortingWindow.innerHTML = "";
-  for (let i = 0; i < n; i++) {
-    const bar = document.createElement("div");
-    bar.style.height = arr[i] * 100 + "%";
-    bar.classList.add("bar");
-    if (move && move.indicies.includes(i)) {
-      bar.style.backgroundColor = move.type == "swap" ? "blue" : "red";
-    }
-    sortingWindow.appendChild(bar);
-  }
-}
 
 function disableButtons() {
   sortingButtons.forEach((button) => {
@@ -81,6 +91,46 @@ function enableButtons() {
   document.querySelector(".speed-slider").disabled = false;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
 //bubble sort section starts
 
 //bubble sort section ends

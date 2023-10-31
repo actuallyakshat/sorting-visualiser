@@ -1,45 +1,33 @@
-function bubbleSort(arr) {
-  var swapped = true;
-  const moves = [];
-  while (swapped) {
-    swapped = false;
-    for (let i = 1; i < arr.length; i++) {
-      moves.push({indicies:[i - 1, i], type:"comp"});
-      if (arr[i - 1] > arr[i]) {
-        swapped = true;
-        moves.push({indicies:[i - 1, i], type:"swap"});
-        [arr[i - 1], arr[i]] = [arr[i], arr[i - 1]];
+async function bubble(){
+  console.log('In Bubble()');
+  const ele = document.querySelectorAll('.bar');
+  for(let i=0; i<ele.length-1; ++i){
+      console.log(`In ${i}th loop`);
+      for(let j=0; j<ele.length-i-1;++j){
+      console.log('In jth loop');
+      ele[j].style.background= 'rgb(242, 255, 3)';                        //yellow
+      ele[j+1].style.background= 'rgb(242, 255, 3)';                      //yellow
+      await waitforme(delay+60);
+
+
+      if(parseInt(ele[j].style.height) > parseInt(ele[j+1].style.height)){
+          console.log('In if condition');
+          swap(ele[j], ele[j+1]);
       }
-    }
+      ele[j].style.background = 'rgb(0, 255, 255)';                          //cyan
+      ele[j+1].style.background = 'rgb(0, 255, 255)';                        //cyan
+      }
+      ele[ele.length-i-1].style.background = 'rgb(5, 250, 30)';               //lightgreen
   }
-  return moves;
+  ele[0].style.background = 'rgb(5, 250, 30)';                                //lightgreen
 }
 
-function playBubble() {
-  disableButtons();
-  const copyArray = [...arr];
-  updateBubbleTime();
-  updateBubbleSpace();
-  const moves = bubbleSort(copyArray);
-  animateBubbleSort(moves, animationSpeed);
-}
-
-function animateBubbleSort(moves, speed) {
-  if (moves.length == 0) {
-    showBars();
+const bubbleBtn = document.querySelector('.bubble');
+bubbleBtn.addEventListener('click', async function(){
+    disableButtons();
+    await bubble();
     enableButtons();
-    return;
-  }
-  const move = moves.shift();
-  const [i,j] = move.indicies;
-  if(move.type == "swap"){
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  showBars(move);
-  setTimeout(function () {
-    animateBubbleSort(moves, speed);
-  }, speed);
-}
+});
 
 function updateBubbleTime() {
   let data = document.getElementsByClassName("time-details");
