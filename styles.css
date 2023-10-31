@@ -7,10 +7,18 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --document-color: beige;
+}
+
+.dark-theme {
+  --document-color: rgb(65, 65, 65);
+}
+
 .wrapper {
   height: 100vh;
   width: 100%;
-  background-color: beige;
+  background-color: var(--document-color);
   display: flex;
 }
 
