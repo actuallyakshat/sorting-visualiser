@@ -8,18 +8,22 @@
 }
 
 :root {
-  --document-color: beige;
-}
+  --document-color: #f5f5dc;
+  --font-color: #000000
+} 
 
 .dark-theme {
-  --document-color: rgb(65, 65, 65);
+  --document-color: rgb(5, 1, 1);
+  --font-color : #ffffff
 }
 
 .wrapper {
   height: 100vh;
   width: 100%;
   background-color: var(--document-color);
+  color: var(--font-color);
   display: flex;
+  transition: background-color 0.5s, color 0.3s;
 }
 
 .left-section {
@@ -29,6 +33,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: background-color 0.5s, color 0.3s;
+}
+
+.left-section-dark{
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .menu-container {
@@ -88,7 +97,7 @@
 
 .reset-button:hover {
   background-color: #04103f;
-  box-shadow: 2px 2px 3px #04103f;
+  box-shadow: 2px 2px 4px #04103f;
 }
 
 .slider {
@@ -139,7 +148,7 @@
 
 .bubble:hover {
   background-color: #cc9a05;
-  box-shadow: 2px 2px 5px #cc9a05;
+  box-shadow: 2px 2px 4px #cc9a05;
 }
 
 .selection {
@@ -149,7 +158,7 @@
 
 .selection:hover {
   background-color: #3f4449;
-  box-shadow: 2px 2px 5px #3f4449;
+  box-shadow: 2px 2px 4px #3f4449;
 }
 
 .insertion {
@@ -159,7 +168,7 @@
 
 .insertion:hover {
   background-color: #105434;
-  box-shadow: 2px 2px 5px #105434;
+  box-shadow: 2px 2px 4px #105434;
 }
 
 .merge {
@@ -169,17 +178,17 @@
 
 .merge:hover {
   background-color: #a42733;
-  box-shadow: 2px 2px 5px #a42733;
+  box-shadow: 2px 2px 4px #a42733;
 }
 
 .quick {
-  background-color: #1e2225;
+  background-color: #7e12a9;
   color: rgb(231, 231, 231);
 }
 
 .quick:hover {
-  background-color: #000000;
-  box-shadow: 2px 2px 5px #000;
+  background-color: #46074b;
+  box-shadow: 2px 2px 4px #46074b;
 }
 
 .right-section {
@@ -268,11 +277,16 @@
   border-radius: 10px;
 }
 
-.bar {
+.sorting-window-dark{
+  background-color: rgb(18, 18, 23);
+}
+
+.bar-style {
   width: 10%;
   width: 1rem;
   background-color: aliceblue;
   margin: 1px;
+  transition: 0.3s all ease;
 }
 
 .details {

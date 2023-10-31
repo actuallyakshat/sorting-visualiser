@@ -1,44 +1,41 @@
-function bubbleSort(arr) {
-  var swapped = true;
-  const moves = [];
-  while (swapped) {
-    swapped = false;
-    for (let i = 1; i < arr.length; i++) {
-      moves.push({indicies:[i - 1, i], type:"comp"});
-      if (arr[i - 1] > arr[i]) {
-        swapped = true;
-        moves.push({indicies:[i - 1, i], type:"swap"});
-        [arr[i - 1], arr[i]] = [arr[i], arr[i - 1]];
+async function bubbleSort() {
+  const ele = document.querySelectorAll('.bar');
+  const n = ele.length;
+  
+  for (let i = 0; i < n - 1; ++i) {
+    for (let j = 0; j < n - i - 1; ++j) {
+      ele[j].style.background = 'red';
+      ele[j + 1].style.background = 'red';
+
+      await waitforme(animationSpeed);
+
+      const height1 = parseInt(ele[j].style.height);
+      const height2 = parseInt(ele[j + 1].style.height);
+
+      if (height1 > height2) {
+        swap(ele[j], ele[j + 1]);
       }
+
+      ele[j].style.background = 'rgb(255, 255, 255)';
+      ele[j + 1].style.background = 'rgb(255, 255, 255)';
     }
+
+    ele[n - i - 1].style.background = 'rgb(5, 250, 30)';
   }
-  return moves;
+  ele[0].style.background = 'rgb(5, 250, 30)';
 }
+
+const bubbleBtn = document.querySelector('.bubble');
+bubbleBtn.addEventListener('click', async function() {
+  playBubble();
+  disableButtons();
+  await bubbleSort();
+  enableButtons();
+});
 
 function playBubble() {
-  disableButtons();
-  const copyArray = [...arr];
   updateBubbleTime();
   updateBubbleSpace();
-  const moves = bubbleSort(copyArray);
-  animateBubbleSort(moves, animationSpeed);
-}
-
-function animateBubbleSort(moves, speed) {
-  if (moves.length == 0) {
-    showBars();
-    enableButtons();
-    return;
-  }
-  const move = moves.shift();
-  const [i,j] = move.indicies;
-  if(move.type == "swap"){
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  showBars(move);
-  setTimeout(function () {
-    animateBubbleSort(moves, speed);
-  }, speed);
 }
 
 function updateBubbleTime() {
