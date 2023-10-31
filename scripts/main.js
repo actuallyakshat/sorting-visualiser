@@ -1,6 +1,6 @@
 const sortingWindow = document.querySelector(".sorting-window");
 const sortingButtons = document.querySelectorAll(".btn");
-const arr = [];
+let arr = [];
 let determineSpeed = document.querySelector(".speed-slider").value;
 let n = document.querySelector(".size-slider").value;
 generateArray();
@@ -14,6 +14,7 @@ document.querySelector(".speed-slider").addEventListener("input", updateSpeed);
 
 
 function generateArray() {
+  arr = [];
   sortingWindow.innerHTML = "";
   n = document.querySelector(".size-slider").value;
   for (let i = 0; i < n; i++) {
@@ -48,14 +49,14 @@ function updateSpeed() {
   }
 }
 
-function showBars(indicies) {
+function showBars(move) {
   sortingWindow.innerHTML = "";
   for (let i = 0; i < n; i++) {
     const bar = document.createElement("div");
     bar.style.height = arr[i] * 100 + "%";
     bar.classList.add("bar");
-    if (indicies && indicies.includes(i)) {
-      bar.style.backgroundColor = "red";
+    if (move && move.indicies.includes(i)) {
+      bar.style.backgroundColor = move.type == "swap" ? "blue" : "red";
     }
     sortingWindow.appendChild(bar);
   }
@@ -81,58 +82,7 @@ function enableButtons() {
 }
 
 //bubble sort section starts
-function bubbleSort(arr) {
-  var swapped = true;
-  const swaps = [];
-  while (swapped) {
-    swapped = false;
-    for (let i = 1; i < arr.length; i++) {
-      if (arr[i - 1] > arr[i]) {
-        swaps.push([i - 1, i]);
-        swapped = true;
-        [arr[i - 1], arr[i]] = [arr[i], arr[i - 1]];
-      }
-    }
-  }
-  return swaps;
-}
 
-function playBubble() {
-  disableButtons();
-  const copyArray = [...arr];
-  updateBubbleTime();
-  updateBubbleSpace();
-  const swaps = bubbleSort(copyArray);
-  animateBubbleSort(swaps, animationSpeed);
-}
-
-function animateBubbleSort(swaps, speed) {
-  if (swaps.length == 0) {
-    showBars();
-    enableButtons();
-  }
-
-  const [i, j] = swaps.shift();
-  [arr[i], arr[j]] = [arr[j], arr[i]];
-  showBars([i, j]);
-  setTimeout(function () {
-    animateBubbleSort(swaps, speed);
-  }, speed);
-}
-
-function updateBubbleTime() {
-  let data = document.getElementsByClassName("time-details");
-  data[0].innerHTML = "O(N)";
-  data[1].innerHTML = "O(N<sup>2</sup>)";
-  data[2].innerHTML = "O(N<sup>2</sup>)";
-}
-
-function updateBubbleSpace() {
-  let data = document.getElementsByClassName("space-details");
-  data[0].innerHTML = "O(1)";
-  data[1].innerHTML = "O(1)";
-  data[2].innerHTML = "O(1)";
-}
 //bubble sort section ends
 
 //insertion sort section starts
