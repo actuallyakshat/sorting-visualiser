@@ -1,8 +1,9 @@
+//extracting the components
 const sortingWindow = document.querySelector(".sorting-window");
-const sortingButtons = document.querySelectorAll(".btn");
 let arr = [];
+const sortingButtons = document.querySelectorAll(".btn");
 let determineSpeed = document.querySelector(".speed-slider").value;
-let n = document.querySelector(".size-slider").value;
+let determinSize = document.querySelector(".size-slider").value;
 generateArray();
 updateSpeed();
 document
@@ -11,20 +12,19 @@ document
 
 document.querySelector(".speed-slider").addEventListener("input", updateSpeed);
 
-
-
 function generateArray() {
   arr = [];
   sortingWindow.innerHTML = "";
-  n = document.querySelector(".size-slider").value;
-  for (let i = 0; i < n; i++) {
+  determinSize = document.querySelector(".size-slider").value;
+  for (let i = 0; i < determinSize; i++) {
     arr[i] = Math.random();
   }
+  console.log(arr);
   showBars();
 }
 
 function updateArraySize() {
-  n = document.querySelector(".size-slider").value;
+  determinSize = document.querySelector(".size-slider").value;
   generateArray();
 }
 
@@ -49,15 +49,28 @@ function updateSpeed() {
   }
 }
 
+function swap(ele1, ele2) {
+  console.log("In swap()");
+
+  let temp = ele1.style.height;
+  ele1.style.height = ele2.style.height;
+  ele2.style.height = temp;
+}
+
+function waitforme(milisec) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("");
+    }, milisec);
+  });
+}
+
 function showBars(move) {
-  sortingWindow.innerHTML = "";
-  for (let i = 0; i < n; i++) {
+  // const bars = document.querySelector('#bars');
+  for (let i = 0; i < determinSize; i++) {
     const bar = document.createElement("div");
     bar.style.height = arr[i] * 100 + "%";
     bar.classList.add("bar");
-    if (move && move.indicies.includes(i)) {
-      bar.style.backgroundColor = move.type == "swap" ? "blue" : "red";
-    }
     sortingWindow.appendChild(bar);
   }
 }
