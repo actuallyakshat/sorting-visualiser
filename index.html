@@ -26,7 +26,7 @@
               value="30"
             />
 
-            <p style="font-weight: bold;">Speed of the algorithm:</p>
+            <p style="font-weight: bold">Speed of the algorithm:</p>
             <input
               class="slider speed-slider"
               type="range"
@@ -35,7 +35,9 @@
               value="3"
             />
 
-            <button class="btn reset-button" onclick="generateArray()">Reset Array</button>
+            <button class="btn reset-button" onclick="generateArray()">
+              Reset Array
+            </button>
           </div>
 
           <div class="buttons-box">
@@ -64,6 +66,10 @@
               <p>Sorted</p>
               <div class="comparison-red-legend"></div>
               <p>Comparison</p>
+            </div>
+            <div class="toggle-switch">
+              <div class="toggle-slider"></div>
+              <div class="toggle-thumb"></div>
             </div>
           </div>
 
@@ -111,5 +117,6 @@
     <script src="./scripts/insertion.js"></script>
     <script src="./scripts/merge.js"></script>
     <script src="./scripts/quick.js"></script>
+    <script src="toggle.js"></script>
   </body>
 </html>

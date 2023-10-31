@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,400;1,500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,10 +7,18 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --document-color: beige;
+}
+
+.dark-theme {
+  --document-color: rgb(65, 65, 65);
+}
+
 .wrapper {
   height: 100vh;
   width: 100%;
-  background-color: rgb(243, 243, 231);
+  background-color: var(--document-color);
   display: flex;
 }
 
@@ -42,14 +50,14 @@
   left: 5.5rem; */
 }
 
-#title-sorting{
-  font-family: 'Raleway', sans-serif;
+#title-sorting {
+  font-family: "Raleway", sans-serif;
   font-size: 3rem;
   font-weight: bold;
 }
 
-#title-visualiser{
-  font-family: 'Raleway', sans-serif;
+#title-visualiser {
+  font-family: "Raleway", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   font-style: italic;
@@ -65,7 +73,7 @@
   gap: 1rem;
 }
 
-.reset-button{
+.reset-button {
   padding: 10px;
   border: none;
   border-radius: 7px;
@@ -78,7 +86,7 @@
   letter-spacing: 0.2ch;
 }
 
-.reset-button:hover{
+.reset-button:hover {
   background-color: #04103f;
   box-shadow: 2px 2px 3px #04103f;
 }
@@ -120,7 +128,7 @@
   font-weight: 500;
 }
 
-.btn-disable{
+.btn-disable {
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -186,12 +194,13 @@
 
 .legend {
   height: 100px;
-
+  /* display: flex; */
   position: relative;
 }
 
 .legend-items {
   display: flex;
+  /* display: inline-block; */
   position: absolute;
   top: 3.75rem;
 }
@@ -217,6 +226,35 @@
 
 .comparison-red-legend {
   background-color: red;
+}
+
+.toggle-switch {
+  position: absolute;
+  left: 75rem;
+  top: 4rem;
+}
+
+.toggle-slider {
+  height: 1.85rem;
+  width: 3.5rem;
+  background-color: #222;
+  border-radius: 30px;
+  position: relative;
+}
+
+.toggle-thumb {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #505050;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  transition: 0.3s;
+}
+
+.toggle-on {
+  left: 1.7rem;
 }
 
 .sorting-window {
