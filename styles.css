@@ -10,7 +10,7 @@
 }
 
 :root {
-  --document-color: #FFFFF3;
+  --document-color: #fffff3;
   --font-color: #000000;
   --toggle-slider: rgb(196, 194, 194);
   --toggle-thumb: #7e7d7d;
@@ -235,8 +235,10 @@
 
 .legend {
   height: 100px;
+  /* width: 100%; */
   /* display: flex; */
   position: relative;
+  /* background-color: pink; */
 }
 
 .legend-items {
@@ -271,8 +273,8 @@
 
 .toggle-switch {
   position: absolute;
-  left: 75rem;
-  top: 4rem;
+  left: 93%;
+  top: 58%;
 }
 
 .toggle-slider {
