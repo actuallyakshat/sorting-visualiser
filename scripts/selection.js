@@ -5,7 +5,7 @@ async function selection() {
     ele[i].style.background = "rgb(255, 115, 3)"; //Orange
     for (let j = i + 1; j < ele.length; ++j) {
       ele[j].style.background = "rgb(242, 255, 3)"; //Yellow
-
+      await shallWePause();
       await waitforme(animationSpeed);
       await waitforme(animationSpeed);
       if (
@@ -21,6 +21,7 @@ async function selection() {
     }
     await waitforme(animationSpeed);
     swap(ele[min_index], ele[i]);
+    await shallWePause();
     ele[min_index].style.background = "rgb(255, 255, 255)";
     ele[i].style.background = "rgb(5, 250, 30)"; //Lightgreen
   }
@@ -29,6 +30,7 @@ async function selection() {
 const selectionSortbtn = document.querySelector(".selection");
 selectionSortbtn.addEventListener("click", async function () {
   playSelection();
+  playSorting();
   disableButtons();
   await selection();
   enableButtons();

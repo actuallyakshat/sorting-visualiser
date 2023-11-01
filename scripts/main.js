@@ -1,4 +1,5 @@
 const sortingButtons = document.querySelectorAll(".btn"); //fetching to disable and enable all buttons
+const playAndPause = document.querySelector(".toggle-play");
 let arr = []; //we will work on this array
 let determineSpeed = document.querySelector(".speed-slider").value; //value from speed slider
 let arraySize = document.querySelector(".size-slider").value; //value from size slider
@@ -6,6 +7,28 @@ const sortingWindow = document.querySelector(".sorting-window");
 
 generateArray();
 updateSpeed();
+
+let isSortingPaused = false; // Variable to track whether sorting is paused
+
+// Function to handle the pause button click
+function pauseSorting() {
+  isSortingPaused = true;
+}
+
+// Function to handle the play button click
+function playSorting() {
+  isSortingPaused = false;
+  // Resume your sorting algorithm or animation logic here
+}
+
+async function shallWePause() {
+  if (isSortingPaused) {
+    // If sorting is paused, wait until it's unpaused
+    while (isSortingPaused) {
+      await new Promise((resolve) => setTimeout(resolve, 100)); // Adjust the delay as needed
+    }
+  }
+}
 
 //changing sliders automatically calls the updation functions
 document.querySelector(".size-slider").addEventListener("input", generateArray);
@@ -28,6 +51,7 @@ function waitforme(milisec) {
 
 //generate array function
 function generateArray() {
+  enableButtons();
   arr = [];
   sortingWindow.innerHTML = "";
   arraySize = document.querySelector(".size-slider").value;
@@ -54,7 +78,7 @@ function updateSpeed() {
       animationSpeed = 200;
       break;
     case "2":
-      animationSpeed = 90;
+      animationSpeed = 170;
       break;
     case "3":
       animationSpeed = 150;
@@ -69,6 +93,7 @@ function updateSpeed() {
 }
 
 function disableButtons() {
+  playAndPause.classList.add("active");
   sortingButtons.forEach((button) => {
     button.classList.add("btn-disable");
     button.disabled = true;
@@ -78,9 +103,21 @@ function disableButtons() {
 }
 
 function enableButtons() {
+  playAndPause.classList.remove("active");
   sortingButtons.forEach((button) => {
     button.disabled = false;
     button.classList.remove("btn-disable");
   });
   document.querySelector(".size-slider").disabled = false;
 }
+
+window.onkeydown = function (event) {
+  if (event.keyCode === 32) {
+    event.preventDefault();
+    if (isSortingPaused) {
+      document.querySelector(".play").click();
+    } else {
+      document.querySelector(".pause").click();
+    }
+  }
+};

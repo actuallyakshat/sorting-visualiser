@@ -7,6 +7,7 @@ async function merge(ele, l, m, h) {
   //Left Side of the Array
   for (let i = 0; i < n1; ++i) {
     await waitforme(animationSpeed);
+
     ele[l + i].style.background = "rgb(255, 115, 3)"; //Orange
     left[i] = ele[l + i].style.height;
   }
@@ -15,6 +16,7 @@ async function merge(ele, l, m, h) {
   for (let i = 0; i < n2; ++i) {
     await waitforme(animationSpeed);
     ele[m + 1 + i].style.background = "rgb(242, 255, 3)"; //Yellow
+    await shallWePause();
     right[i] = ele[m + 1 + i].style.height;
   }
 
@@ -24,6 +26,7 @@ async function merge(ele, l, m, h) {
   k = l;
 
   while (i < n1 && j < n2) {
+    await shallWePause();
     await waitforme(animationSpeed);
 
     if (n1 + n2 === ele.length) {
@@ -45,6 +48,7 @@ async function merge(ele, l, m, h) {
   }
   //To copy the remaining elements of left array
   while (i < n1) {
+    await shallWePause();
     await waitforme(animationSpeed);
     //To add color if the element is at its actual position after sorting
     if (n1 + n2 === ele.length) {
@@ -60,6 +64,7 @@ async function merge(ele, l, m, h) {
   }
   //To copy the remaining elements of right array
   while (j < n2) {
+    await shallWePause();
     await waitforme(animationSpeed);
     //To add color if the element is at its actual position after sorting
     if (n1 + n2 === ele.length) {
@@ -80,6 +85,7 @@ async function mergeSort(ele, l, r) {
     return;
   }
   const m = l + Math.floor((r - l) / 2);
+  await shallWePause();
   await mergeSort(ele, l, m);
   await mergeSort(ele, m + 1, r);
   await merge(ele, l, m, r);
@@ -91,6 +97,7 @@ mergeSortbtn.addEventListener("click", async function () {
   let l = 0;
   let r = parseInt(ele.length) - 1;
   playMerge();
+  playSorting();
   disableButtons();
   await mergeSort(ele, l, r);
   enableButtons();
