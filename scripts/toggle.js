@@ -8,7 +8,6 @@ let spaceBox = document.querySelector(".space");
 slider.addEventListener("click", toggle);
 thumb.addEventListener("click", toggle);
 
-console.log("yaha tak theek hai 2");
 // Check the time and enable dark mode after 7 PM
 function checkIfNight() {
   const currentTime = new Date();
@@ -28,5 +27,5 @@ function toggle() {
   spaceBox.classList.toggle("space-dark");
 }
 
-toggle();
+checkIfNight();
 setInterval(checkIfNight, 60000);
