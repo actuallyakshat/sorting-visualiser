@@ -1,12 +1,15 @@
+const ele = document.querySelectorAll(".bar");
 async function part(ele, l, h) {
   let i = l - 1;
-  ele[h].style.background = "red";
+  ele[h].style.background = "red"; //color of the pivot
   for (let j = l; j <= h - 1; ++j) {
+    await shallWePause();
     ele[j].style.background = "rgb(242, 255, 3)"; //Yellow
     await waitforme(animationSpeed);
     await waitforme(animationSpeed);
     if (parseInt(ele[j].style.height) < parseInt(ele[h].style.height)) {
       ++i;
+      await shallWePause();
       swap(ele[i], ele[j]);
       ele[i].style.background = "rgb(255, 115, 3)"; //Orange
       if (i != j) ele[j].style.background = "salmon"; //Cyan------>Salmon
@@ -19,6 +22,7 @@ async function part(ele, l, h) {
   }
   ++i;
   await waitforme(animationSpeed);
+  await shallWePause();
   //Pivot at its actual position
   swap(ele[i], ele[h]);
   ele[h].style.background = "salmon";
@@ -27,9 +31,9 @@ async function part(ele, l, h) {
   for (let j = 0; j < ele.length; ++j) {
     if (ele[j].style.background != "rgb(5, 250, 30)")
       //LightGreen
+      // await shallWePause();
       ele[j].style.background = "rgb(0, 255, 255)"; //Cyan
   }
-
   return i;
 }
 
@@ -41,6 +45,7 @@ async function quickSort(ele, l, h) {
     await quickSort(ele, pi + 1, h);
   } else {
     if (l >= 0 && h >= 0 && l < ele.length && h < ele.length) {
+      await shallWePause();
       ele[h].style.background = "rgb(5, 250, 30)";
       ele[l].style.background = "rgb(5, 250, 30)";
     }

@@ -47,17 +47,18 @@
 }
 
 .menu-container {
-  height: 90%;
+  height: 93%;
   margin: auto 0;
   /* background-color: red; */
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  justify-content: space-evenly;
+  gap: 1.5rem;
 }
 
 .title {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-size: 1.5rem;
   text-transform: uppercase;
   /* position: absolute;
@@ -79,7 +80,7 @@
 }
 
 .parameters {
-  margin: 0 auto;
+  margin: 10% auto 15% auto;
   height: 200px;
   width: 70%;
   display: flex;
@@ -89,6 +90,7 @@
 }
 
 .reset-button {
+  margin-top: 5%;
   padding: 10px;
   border: none;
   border-radius: 7px;
@@ -155,6 +157,7 @@
   justify-content: center;
   gap: 1.7rem;
   align-items: center;
+  margin-bottom: 0%;
 }
 
 .buttons-box button {
@@ -163,6 +166,36 @@
   border: none;
   width: 60%;
   padding: 10px;
+  transition: 0.2s;
+  font-weight: 600;
+  font-family: "Roboto Mono", monospace;
+  font-size: 15px;
+}
+
+.toggle-play{
+  display: flex;
+  padding: 0 1.5rem;
+  scale: 1.05;
+  width: fit-content;
+  justify-content: center;
+  gap: 1.7rem;
+  align-items: center;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.active{
+  opacity: 1;
+}
+
+
+.toggle-play button {
+  cursor: pointer;
+  border-radius: 7px;
+  border: none;
+  width: 60%;
+  padding: 12px 17px;
   transition: 0.2s;
   font-weight: 600;
   font-family: "Roboto Mono", monospace;
@@ -410,4 +443,14 @@ li {
   position: relative;
   font-size: 1rem;
   margin-bottom: 5px;
+}
+
+.disc{
+  font-family: "Roboto Mono", monospace;
+  width: fit-content;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  font-style: italic;
+  font-weight: 500;
 }

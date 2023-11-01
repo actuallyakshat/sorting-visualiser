@@ -12,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="icon" href="./assets/favicon.png" />
   </head>
   <body>
     <div class="wrapper">
@@ -30,7 +31,7 @@
               type="range"
               min="5"
               max="80"
-              value="30"
+              value="40"
             />
 
             <p style="font-weight: bold">Speed of the algorithm:</p>
@@ -42,8 +43,8 @@
               value="3"
             />
 
-            <button class="btn reset-button" onclick="generateArray()">
-              Reset Array
+            <button class="reset-button" onclick="generateArray()">
+              Generate New Array
             </button>
           </div>
 
@@ -53,6 +54,15 @@
             <button class="btn insertion">Insertion Sort</button>
             <button class="btn merge">Merge Sort</button>
             <button class="btn quick">Quick Sort</button>
+          </div>
+
+          <div class="toggle-play">
+            <button class="pause" onclick="pauseSorting()">
+              <i class="fa-solid fa-pause" style="color: #016a70"></i>
+            </button>
+            <button class="play" onclick="playSorting()">
+              <i class="fa-solid fa-play" style="color: #016a70"></i>
+            </button>
           </div>
         </div>
       </section>
@@ -117,6 +127,12 @@
                 <div class="space-details">--</div>
               </div>
             </div>
+          </div>
+          <div class="disclaimer">
+            <p class="disc">
+              Press spacebar to <span style="font-weight: bold">Play</span> or
+              <span style="font-weight: bold">Pause</span> the visualisation
+            </p>
           </div>
         </div>
       </section>
