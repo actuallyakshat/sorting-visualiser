@@ -2,8 +2,7 @@ async function insertion(){
     const ele = document.querySelectorAll('.bar');
     ele[0].style.background = 'rgb(5, 250, 30)';                //light green
 
-    for(let i=1;i<ele.length;++i){
-        console.log(`In ${i}th loop`);    
+    for(let i=1;i<ele.length;++i){ 
         let j=i-1;
         let key=ele[i].style.height;
 
@@ -13,8 +12,7 @@ async function insertion(){
         await waitforme(animationSpeed);
 
         while(j>=0 && (parseInt(ele[j].style.height)> parseInt(key))){
-            console.log('In While loop');
-            // ele[j].style.background = 'rgb(242, 255, 3)';       //yellow
+            ele[j].style.background = 'rgb(242, 255, 3)';       //yellow
             ele[j].style.background = 'yellow';
             ele[j+1].style.height = ele[j].style.height;
             --j;
@@ -25,6 +23,7 @@ async function insertion(){
             for(let k=i-1; k>=0;--k)
             ele[k].style.background = 'rgb(5, 250, 30)';            //lightgreen
         }
+        await waitforme(animationSpeed);
         ele[j+1].style.height = key;
         ele[i].style.background = 'rgb(5, 250, 30)';                //lightgreen
     }

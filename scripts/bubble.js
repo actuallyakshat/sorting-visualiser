@@ -5,8 +5,10 @@ async function bubbleSort() {
   for (let i = 0; i < n - 1; ++i) {
     for (let j = 0; j < n - i - 1; ++j) {
       ele[j].style.background = 'red';
-      ele[j + 1].style.background = 'red';
+      ele[j + 1].style.background = 'yellow';
 
+      await waitforme(animationSpeed);
+      await waitforme(animationSpeed);
       await waitforme(animationSpeed);
 
       const height1 = parseInt(ele[j].style.height);

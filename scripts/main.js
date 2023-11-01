@@ -51,7 +51,7 @@ function updateSpeed() {
   determineSpeed = document.querySelector(".speed-slider").value;
   switch (determineSpeed) {
     case "1":
-      animationSpeed = 120;
+      animationSpeed = 200;
       break;
     case "2":
       animationSpeed = 90;
@@ -63,7 +63,7 @@ function updateSpeed() {
       animationSpeed = 70;
       break;
     case "5":
-      animationSpeed = 20;
+      animationSpeed = 10;
       break;
   }
 }
