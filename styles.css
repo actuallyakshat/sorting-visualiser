@@ -111,44 +111,26 @@
 
 .slider {
   appearance: none;
-}
-
-/* .slider::-webkit-slider-thumb {
-  margin-top: -5px;
-  appearance: none;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 50%;
-  background-color: #ffbfa9;
+  height: 10 px;
+  background-color: #a2c579;
+  outline: none;
+  border-radius: 15px;
 }
 
 .slider::-webkit-slider-runnable-track {
-  background-color: #ff6969;
-  border-radius: 8px;
-  height: 5px;
-} */
-
-/* Styling for the part of the slider that is not covered (track) */
-.slider::-webkit-slider-runnable-track {
-  background-color: white; /* Color for the uncovered part of the track */
-  border-radius: 8px;
-  height: 5px;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
-/* Styling for the slider thumb (handle) */
 .slider::-webkit-slider-thumb {
-  margin-top: -5px;
   appearance: none;
-  height: 1rem;
-  width: 1rem;
+  width: 10px;
+  height: 10px;
+  background: #016a70;
+  border: 7px solid #016a70;
   border-radius: 50%;
-  background-color: #016a70; /* Color for the slider thumb (handle) */
-}
-
-.slider::-webkit-slider-runnable-track {
-  background-color: #a2c579; /* Color for the covered part of the track */
-  border-radius: 8px;
-  height: 5px;
+  box-shadow: -407px 0 0 400px #38452a;
+  cursor: pointer;
 }
 
 .buttons-box {
@@ -172,7 +154,7 @@
   font-size: 15px;
 }
 
-.toggle-play{
+.toggle-play {
   display: flex;
   padding: 0 1.5rem;
   scale: 1.05;
@@ -185,10 +167,9 @@
   transition: opacity 0.5s;
 }
 
-.active{
+.active {
   opacity: 1;
 }
-
 
 .toggle-play button {
   cursor: pointer;
@@ -445,7 +426,7 @@ li {
   margin-bottom: 5px;
 }
 
-.disc{
+.disc {
   font-family: "Roboto Mono", monospace;
   width: fit-content;
   position: absolute;

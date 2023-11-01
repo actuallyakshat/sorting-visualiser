@@ -28,4 +28,3 @@ function toggle() {
 }
 
 checkIfNight();
-setInterval(checkIfNight, 60000);
