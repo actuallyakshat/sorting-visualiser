@@ -5,9 +5,9 @@ async function selection() {
     ele[i].style.background = "rgb(255, 115, 3)"; //Orange
     for (let j = i + 1; j < ele.length; ++j) {
       ele[j].style.background = "rgb(242, 255, 3)"; //Yellow
+      await waitforme(animationSpeed);
+      await waitforme(animationSpeed);
       await shallWePause();
-      await waitforme(animationSpeed);
-      await waitforme(animationSpeed);
       if (
         parseInt(ele[j].style.height) < parseInt(ele[min_index].style.height)
       ) {
@@ -39,6 +39,13 @@ selectionSortbtn.addEventListener("click", async function () {
 function playSelection() {
   updateSelectionTime();
   updateSelectionSpace();
+  updateSelectionSortDetails();
+}
+
+function updateSelectionSortDetails(){
+  let data = document.querySelector(".sort-desc");
+  data.style.opacity = "1";
+  data.innerText = "Selection sort is an in-place and unstable sorting algorithm."
 }
 
 function updateSelectionTime() {

@@ -66,18 +66,25 @@ quickSortbtn.addEventListener("click", async function () {
 function playQuick() {
   updateQuickTime();
   updateQuickSpace();
+  updateQuickSortDetails();
+}
+
+function updateQuickSortDetails() {
+  let data = document.querySelector(".sort-desc");
+  data.style.opacity = "1";
+  data.innerText = "Quick sort is an in-place and unstable sorting algorithm.";
 }
 
 function updateQuickTime() {
   let data = document.getElementsByClassName("time-details");
   data[0].innerHTML = "O(N x LogN)";
   data[1].innerHTML = "O(N x LogN)";
-  data[2].innerHTML = "O(N x LogN)";
+  data[2].innerHTML = "O(N<sup>2</sup>)";
 }
 
 function updateQuickSpace() {
   let data = document.getElementsByClassName("space-details");
-  data[0].innerHTML = "O(N)";
+  data[0].innerHTML = "O(Log (N))";
   data[1].innerHTML = "O(N)";
   data[2].innerHTML = "O(N)";
 }

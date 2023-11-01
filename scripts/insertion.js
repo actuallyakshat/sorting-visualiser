@@ -47,6 +47,13 @@ inSortbtn.addEventListener("click", async function () {
 function playInsertion() {
   updateInsertionTime();
   updateInsertionSpace();
+  updateInsertionSortDetails();
+}
+
+function updateInsertionSortDetails(){
+  let data = document.querySelector(".sort-desc");
+  data.style.opacity = "1";
+  data.innerText = "Insertion sort is an in-place and stable sorting algorithm."
 }
 
 function updateInsertionTime() {

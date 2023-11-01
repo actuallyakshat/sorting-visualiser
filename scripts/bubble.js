@@ -42,6 +42,13 @@ bubbleBtn.addEventListener("click", async function () {
 function playBubble() {
   updateBubbleTime();
   updateBubbleSpace();
+  updateBubbleSortDetails();
+}
+
+function updateBubbleSortDetails(){
+  let data = document.querySelector(".sort-desc");
+  data.style.opacity = "1";
+  data.innerText = "Bubble sort is an in-place and stable sorting algorithm."
 }
 
 function updateBubbleTime() {

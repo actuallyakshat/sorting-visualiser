@@ -4,6 +4,9 @@ let arr = []; //we will work on this array
 let determineSpeed = document.querySelector(".speed-slider").value; //value from speed slider
 let arraySize = document.querySelector(".size-slider").value; //value from size slider
 const sortingWindow = document.querySelector(".sorting-window");
+const pauseButton = document.querySelector(".pause");
+const playButton = document.querySelector(".play");
+const pauseStatus = document.querySelector(".pause-status");
 
 generateArray();
 updateSpeed();
@@ -12,11 +15,15 @@ let isSortingPaused = false; // Variable to track whether sorting is paused
 
 // Function to handle the pause button click
 function pauseSorting() {
+  pauseButton.style.backgroundColor = "#3d3d3d";
   isSortingPaused = true;
+  pauseStatus.innerText = "Paused...";
 }
 
 // Function to handle the play button click
 function playSorting() {
+  pauseButton.style.backgroundColor = "#F0F0F0";
+  pauseStatus.innerText = "";
   isSortingPaused = false;
   // Resume your sorting algorithm or animation logic here
 }

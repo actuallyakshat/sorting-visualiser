@@ -106,6 +106,14 @@ mergeSortbtn.addEventListener("click", async function () {
 function playMerge() {
   updateMergeTime();
   updateMergeSpace();
+  updateMergeSortDetails();
+}
+
+function updateMergeSortDetails() {
+  let data = document.querySelector(".sort-desc");
+  data.style.opacity = "1";
+  data.innerText =
+    "Merge sort is an out-of-place and stable sorting algorithm.";
 }
 
 function updateMergeTime() {
