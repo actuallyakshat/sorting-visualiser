@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,400;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,400;1,500&family=Roboto+Mono:ital,wght@0,300;0,400;0,600;0,700;1,200;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap");
 
 * {
   padding: 0;
@@ -342,8 +343,9 @@
   background-color: rgb(18, 18, 23);
 }
 
-.pause-status{
-  font-family: "Roboto Mono", monospace;
+.pause-status {
+  /* font-family: "Roboto Mono", monospace; */
+  font-family: "Raleway Dots", sans-serif;
   font-weight: bold;
   position: absolute;
   z-index: 100;
@@ -352,7 +354,7 @@
   color: white;
 }
 
-.active{
+.active {
   opacity: 1;
 }
 
@@ -364,7 +366,7 @@
   transition: 0.3s all ease;
 }
 
-.sort-desc{
+.sort-desc {
   height: 40px;
   font-family: "Roboto Mono", monospace;
   margin-top: 2rem;
@@ -380,31 +382,32 @@
   margin: 1rem 0;
 }
 
-.spaceComplex{
-    width: 406px;
+.spaceComplex {
+  width: 406px;
 }
 
-.cell{
+.cell {
   border: 1px solid black;
   transition: all 0.3s;
 }
 
-.dark-borders{
+.dark-borders {
   border: 1px solid white;
 }
 
-.time-top{
+.time-top {
   text-align: left;
   background-color: rgb(187, 217, 251);
   font-weight: bold;
   transition: background-color 0.3s;
 }
 
-.time-top-dark{
+.time-top-dark {
   background-color: rgb(4, 56, 115);
 }
 
-.time th, .time td{
+.time th,
+.time td {
   padding: 7px 5px;
 }
 .space {
@@ -413,17 +416,18 @@
   margin: 1rem 0;
 }
 
-.space-top{
+.space-top {
   text-align: left;
   background-color: rgb(229, 187, 147);
   font-weight: bold;
 }
 
-.space th, .space td{
+.space th,
+.space td {
   padding: 7px 5px;
 }
 
-.space-top-dark{
+.space-top-dark {
   background-color: rgb(133, 64, 0);
 }
 
