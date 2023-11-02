@@ -1,4 +1,5 @@
 @media screen and (max-width: 1700px) {
+  /* for the left section */
   .title {
     margin-top: 0;
   }
@@ -24,5 +25,35 @@
   }
   .toggle-play button {
     padding: 10px 15px;
+  }
+  /* for the right section */
+  .sorting-window {
+    height: 58%;
+    padding: 4rem 1rem 0;
+    margin-top: 0.8rem;
+  }
+  .legend {
+    height: 5rem;
+  }
+  .legend-items {
+    /* position: relative; */
+  }
+  .pause-status {
+    top: 14%;
+  }
+  .sort-desc {
+    height: 2rem;
+    font-size: 1.25rem;
+  }
+  .tables {
+    display: flex;
+  }
+  .time,
+  .space {
+    min-width: 50%;
+  }
+  .disc {
+    top: 1%;
+    right: 8%;
   }
 }
