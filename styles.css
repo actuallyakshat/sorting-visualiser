@@ -347,7 +347,7 @@
   font-weight: bold;
   position: absolute;
   z-index: 100;
-  top: 13%;
+  top: 12%;
   left: 26%;
   color: white;
 }
@@ -367,7 +367,7 @@
 .sort-desc{
   height: 40px;
   font-family: "Roboto Mono", monospace;
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-weight: bold;
   font-size: 1.5rem;
   opacity: 0;
@@ -377,7 +377,7 @@
 .time {
   border-collapse: collapse;
   min-width: 100%;
-  margin: 1rem 0;
+  margin: 3rem 0 1rem 0;
 }
 
 .spaceComplex{

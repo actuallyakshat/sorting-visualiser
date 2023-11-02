@@ -7,7 +7,7 @@ const sortingWindow = document.querySelector(".sorting-window");
 const pauseButton = document.querySelector(".pause");
 const playButton = document.querySelector(".play");
 const pauseStatus = document.querySelector(".pause-status");
-
+let visualisationStatus = false;
 generateArray();
 updateSpeed();
 
@@ -17,7 +17,9 @@ let isSortingPaused = false; // Variable to track whether sorting is paused
 function pauseSorting() {
   pauseButton.style.backgroundColor = "#3d3d3d";
   isSortingPaused = true;
-  pauseStatus.innerText = "Paused...";
+  if (visualisationStatus) {
+    pauseStatus.innerText = "Paused...";
+  }
 }
 
 // Function to handle the play button click
@@ -56,8 +58,36 @@ function waitforme(milisec) {
   });
 }
 
+function resetSort() {
+  resetSortTime();
+  resetSortSpace();
+  resetSortDesc();
+}
+
+function resetSortDesc() {
+  let data = document.querySelector(".sort-desc");
+  data.style.opacity = "0";
+  data.innerText = "";
+}
+
+function resetSortTime() {
+  let data = document.getElementsByClassName("time-details");
+  data[0].innerHTML = "";
+  data[1].innerHTML = "";
+  data[2].innerHTML = "";
+}
+function resetSortSpace() {
+  let data = document.getElementsByClassName("space-details");
+  data[0].innerHTML = "";
+  data[1].innerHTML = "";
+  data[2].innerHTML = "";
+}
+
 //generate array function
 function generateArray() {
+  resetSort();
+  pauseStatus.innerText = "";
+  visualisationStatus = false;
   enableButtons();
   arr = [];
   sortingWindow.innerHTML = "";
@@ -100,6 +130,7 @@ function updateSpeed() {
 }
 
 function disableButtons() {
+  visualisationStatus = "true";
   playAndPause.classList.add("active");
   sortingButtons.forEach((button) => {
     button.classList.add("btn-disable");
