@@ -1,0 +1,28 @@
+@media screen and (max-width: 1700px) {
+  .title {
+    margin-top: 0;
+  }
+  #title-sorting {
+    font-size: 2rem;
+  }
+  .menu-container {
+    gap: 1.55rem;
+    justify-content: flex-start;
+  }
+  .parameters {
+    gap: 0.45rem;
+    margin: 1% auto;
+  }
+  .reset-button {
+    padding: 8px;
+  }
+  .buttons-box {
+    gap: 0.65rem;
+  }
+  .buttons-box button {
+    padding: 0.4rem;
+  }
+  .toggle-play button {
+    padding: 10px 15px;
+  }
+}
