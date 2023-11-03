@@ -47,6 +47,7 @@
   }
   .tables {
     display: flex;
+    gap: 1rem;
   }
   .time,
   .space {

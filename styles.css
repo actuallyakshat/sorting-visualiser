@@ -340,14 +340,14 @@
 }
 
 .pause-status {
-  /* font-family: "Roboto Mono", monospace; */
-  font-family: "Raleway Dots", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  /* font-family: "Raleway Dots", sans-serif; */
   font-weight: bold;
   position: absolute;
-  z-index: 100;
   top: 13%;
   left: 26%;
   color: white;
+  opacity: 0.8;
 }
 
 .active {
@@ -406,6 +406,11 @@
 .time td {
   padding: 7px 5px;
 }
+
+.time-details, .space-details{
+  text-align: center;
+}
+
 .space {
   border-collapse: collapse;
   min-width: 100%;
