@@ -26,7 +26,7 @@
 
 .wrapper {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-color: var(--document-color);
   color: var(--font-color);
   display: flex;
@@ -379,7 +379,7 @@
 }
 
 .spaceComplex {
-  width: 406px;
+  width: 32%;
 }
 
 .cell {
@@ -430,6 +430,7 @@
 .disc {
   font-family: "Roboto Mono", monospace;
   width: fit-content;
+  height: fit-content;
   position: absolute;
   bottom: 1%;
   right: 1%;
