@@ -73,22 +73,27 @@
 
   .hamburger {
     position: absolute;
-    left: 2rem;
+    left: 1.5rem;
     transform: scale(1.5);
-    display: none;
+    visibility: hidden;
   }
-
+  
   .hamburger-active {
-    display: block;
+    visibility: visible;
   }
 
   .legend {
     position: relative;
+    left: -2rem;
     transform: scale(0.8);
+    display: flex;
+    justify-content: space-between;
   }
 
   .toggle-switch {
     position: relative;
+    left: 4rem ;
+    top: 0.4rem;
   }
 
   .sorting-window {
@@ -112,7 +117,7 @@
     display: none;
   }
 
-  .mobile-menu{
+  .mobile-menu {
     background-color: rgba(255, 0, 0, 0.2);
     position: absolute;
     top: -1rem;
