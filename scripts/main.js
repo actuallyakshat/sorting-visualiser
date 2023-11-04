@@ -10,23 +10,27 @@ const pauseStatus = document.querySelector(".pause-status");
 const mobileMenu = document.querySelector(".left-section");
 const rightSection = document.querySelector(".right-section");
 const hamburger = document.querySelector(".hamburger");
+const disappearMenu = document.querySelector(".close-pause");
 
 generateArray();
 updateSpeed();
 let isSortingPaused = false; // Variable to track whether sorting is paused
-
-hamburger.addEventListener("click", toggleMenu);
+hamburger.addEventListener("click", openMenu);
 
 let isMenuOpen = false;
 
-function toggleMenu() {
-  mobileMenu.classList.toggle("left-active");
-  rightSection.addEventListener("click", closeMenu);
+function openMenu() {
+  mobileMenu.classList.toggle("left-active"); 
+  disappearMenu.classList.toggle("close-pause-active"); 
+  disappearMenu.addEventListener("click", closeMenu);
+  isMenuOpen = true;
 }
+
 
 function closeMenu() {
   if (isMenuOpen) {
-    mobileMenu.classList.remove("left-active");
+    mobileMenu.classList.toggle("left-active");
+    disappearMenu.classList.toggle("close-pause-active");
     isMenuOpen = false;
     rightSection.removeEventListener("click", closeMenu);
   }
@@ -134,7 +138,7 @@ function disableButtons() {
     button.classList.add("btn-disable");
     button.disabled = true;
     if (window.innerWidth <= 800) {
-      button.addEventListener("click", toggleMenu);
+      button.addEventListener("click", openMenu);
     }
   });
 
@@ -147,7 +151,7 @@ function enableButtons() {
     button.disabled = false;
     button.classList.remove("btn-disable");
         if (window.innerWidth <= 800) {
-      button.addEventListener("click", toggleMenu);
+      button.addEventListener("click", openMenu);
     }
   });
   document.querySelector(".size-slider").disabled = false;
