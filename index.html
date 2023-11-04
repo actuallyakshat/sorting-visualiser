@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <!-- <link rel="stylesheet" href="scale.css" /> -->
     <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="mobileMedia.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -26,7 +27,7 @@
           </div>
 
           <div class="parameters">
-            <p style="font-weight: bold">Size of the array:</p>
+            <p class="size-text">Size of the array:</p>
             <input
               class="slider size-slider"
               onclick="generateArray()"
@@ -36,7 +37,7 @@
               value="40"
             />
 
-            <p style="font-weight: bold">Speed of the algorithm:</p>
+            <p class="speed-text">Speed of the algorithm:</p>
             <input
               class="slider speed-slider"
               type="range"
@@ -71,6 +72,8 @@
 
       <section class="right-section">
         <div class="container">
+          <!-- <h3 class="mobile-heading" style="text-align: center; font-size:2rem;">Sorting Visualiser</h3> -->
+          <i class="fa-solid fa-bars-staggered hamburger" style="color: #ffffff;"></i>
           <div class="legend">
             <div class="legend-items">
               <div class="unsorted-legend"></div>
@@ -95,9 +98,8 @@
             </div>
           </div>
 
-          <p class="pause-status"></p>
           <div class="sorting-window" id="bars"></div>
-
+          <p class="pause-status"></p>
           <div class="details">
             <div class="about-sort">
               <p class="sort-desc"></p>

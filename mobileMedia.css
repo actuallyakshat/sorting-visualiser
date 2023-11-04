@@ -1,0 +1,50 @@
+@media screen and (max-width: 600px){
+    
+    /* .left-section{
+        display: block;
+    } */
+
+    .right-section{
+        position: relative;
+        height: fit-content;
+    }
+
+    .container{
+        position: relative;
+        top: -3rem;
+    }
+
+    .legend{
+        left: -3rem;
+        position: relative;
+        transform: scale(0.8);
+    }
+
+    .toggle-switch{
+        position: relative;
+    }
+    
+    .sorting-window{
+        position: relative;
+        left: -1rem;
+        top: 0;
+        max-width: 40vh;
+        width: 50vh;
+    }
+
+    .tables{
+        position: relative;
+        flex-direction: column;
+    }
+
+    .sort-desc{
+        font-size: 1rem;
+        display: block;
+        
+    }
+
+    .disc{
+        display: none;
+    }
+    
+}

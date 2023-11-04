@@ -25,18 +25,19 @@
 }
 
 .wrapper {
-  height: 100vh;
+  height: auto;
   width: 100vw;
   background-color: var(--document-color);
   color: var(--font-color);
   display: flex;
   transition: background-color 0.5s, color 0.3s;
+  overflow-x: hidden;
 }
 
 .left-section {
   height: 100vh;
   width: 20%;
-  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 0.0625rem solid rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,11 +45,11 @@
 }
 
 .left-section-dark {
-  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  border-right: 0.0625rem  solid rgba(255, 255, 255, 0.6);
 }
 
 .menu-container {
-  height: 93%;
+  height: 95%;
   margin: auto 0;
   /* background-color: red; */
   display: flex;
@@ -79,21 +80,31 @@
 
 .parameters {
   margin: 10% auto 15% auto;
-  height: 200px;
-  width: 70%;
+  height: 12.5rem;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.2rem;
+}
+
+.speed-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.size-text {
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .reset-button {
   margin-top: 5%;
-  padding: 10px;
+  padding: 0.625rem;
   border: none;
   border-radius: 7px;
   background-color: #0c227b;
-  font-size: 15px;
+  font-size: 1rem;
   color: white;
   font-weight: 400;
   cursor: pointer;
@@ -104,7 +115,7 @@
 
 .reset-button:hover {
   background-color: #04103f;
-  box-shadow: 2px 2px 4px #04103f;
+  box-shadow: 0.125rem 0.125rem 0.25rem #04103f;
 }
 
 .slider {
@@ -112,18 +123,18 @@
   height: 10 px;
   background-color: #a2c579;
   outline: none;
-  border-radius: 15px;
+  border-radius: 1rem;
 }
 
 .slider::-webkit-slider-runnable-track {
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 
 .slider::-webkit-slider-thumb {
   appearance: none;
-  width: 10px;
-  height: 10px;
+  width: 0.625rem;
+  height: 0.625rem;
   background: #016a70;
   border: 7px solid #016a70;
   border-radius: 50%;
@@ -145,11 +156,11 @@
   border-radius: 7px;
   border: none;
   width: 60%;
-  padding: 10px;
+  padding: 0.625rem;
   transition: 0.2s;
   font-weight: 600;
   font-family: "Roboto Mono", monospace;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .toggle-play {
@@ -263,7 +274,7 @@
 .legend-items div {
   height: 20px;
   width: 20px;
-  border: 1px solid black;
+  border: 0.0625rem  solid black;
   border-radius: 50%;
 }
 
@@ -319,19 +330,23 @@
   transition: 0.3s;
 }
 
+.hamburger{
+  visibility: hidden;
+}
+
 .toggle-on {
   right: 0.2rem;
 }
 
 .sorting-window {
   background-color: black;
-  height: 500px;
+  height: 31.25rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding-top: 100px;
   padding: 100px 1rem 0 1rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   margin-top: 0.75rem;
 }
 
@@ -343,8 +358,9 @@
   font-family: "Roboto Mono", monospace;
   /* font-family: "Raleway Dots", sans-serif; */
   font-weight: bold;
-  position: absolute;
-  top: 13%;
+  position: relative;
+  z-index: 1000;
+  top: 20%;
   left: 26%;
   color: white;
   opacity: 0.8;
@@ -358,7 +374,7 @@
   width: 10%;
   width: 1rem;
   background-color: aliceblue;
-  margin: 1px;
+  margin: 0.0625rem ;
   transition: 0.3s all ease;
 }
 
@@ -383,12 +399,12 @@
 }
 
 .cell {
-  border: 1px solid black;
+  border: 0.0625rem  solid black;
   transition: all 0.3s;
 }
 
 .dark-borders {
-  border: 1px solid white;
+  border: 0.0625rem  solid white;
 }
 
 .time-top {
@@ -407,7 +423,8 @@
   padding: 7px 5px;
 }
 
-.time-details, .space-details{
+.time-details,
+.space-details {
   text-align: center;
 }
 

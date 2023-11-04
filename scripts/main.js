@@ -10,14 +10,24 @@ const pauseStatus = document.querySelector(".pause-status");
 
 generateArray();
 updateSpeed();
-
 let isSortingPaused = false; // Variable to track whether sorting is paused
+
+if(window.innerWidth<=800){
+  sortingWindow.addEventListener("click", pauseOnMobile);
+}
 
 // Function to handle the pause button click
 function pauseSorting() {
   pauseButton.style.backgroundColor = "#3d3d3d";
   isSortingPaused = true;
   pauseStatus.innerText = "Paused...";
+}
+
+function pauseOnMobile(){
+  if(isSortingPaused){
+    playSorting();
+  }
+  else pauseSorting();
 }
 
 // Function to handle the play button click
