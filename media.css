@@ -74,7 +74,7 @@
   }
 
   .left-section {
-    height: 110vh;
+    height: auto;
     width: 27%;
   }
 
@@ -87,6 +87,7 @@
 
   .menu-container {
     position: relative;
+    height: auto;
     gap: 1.75rem;
     justify-content: space-evenly;
     margin: auto 0;
@@ -105,12 +106,12 @@
   }
 
   .left-section {
-    height: fit-content;
+    height: auto;
   }
 
   .menu-container {
     position: relative;
-    height: 100%;
+    height: auto;
     transform: scale(0.9);
     gap: 3rem;
     justify-content: space-evenly;
@@ -125,10 +126,6 @@
 @media screen and (max-width: 1070px) {
   /* for the left section */
 
-  .left-section {
-    height: fit-content;
-  }
-
   .menu-container {
     position: relative;
     transform: scale(0.8);
@@ -138,11 +135,6 @@
 
   .tables {
     margin-top: 2rem;
-  }
-
-  .pause-status {
-    top: 22%;
-    left: 30%;
   }
 
   .disc {

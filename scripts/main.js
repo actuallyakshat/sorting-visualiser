@@ -9,34 +9,46 @@ const playButton = document.querySelector(".play");
 const pauseStatus = document.querySelector(".pause-status");
 const mobileMenu = document.querySelector(".left-section");
 const rightSection = document.querySelector(".right-section");
-const hamburger = document.querySelector(".hamburger");
-const disappearMenu = document.querySelector(".close-pause");
+const disappearMenu = document.querySelector(".mobile-menu");
+const hamBurgerMenu = document.querySelector(".hamburger");
 
+checkIfMobile();
 generateArray();
 updateSpeed();
 let isSortingPaused = false; // Variable to track whether sorting is paused
 
-hamburger.addEventListener("click", openMenu);
+console.log(hamBurgerMenu);
+
+hamBurgerMenu.addEventListener("click", openMenu);
+
 let isMenuOpen = false;
 function openMenu() {
   mobileMenu.classList.toggle("left-active"); 
-  disappearMenu.classList.toggle("close-pause-active"); 
+  disappearMenu.classList.toggle("menu-active"); 
+  hamBurgerMenu.classList.toggle("hamburger-visible");
   disappearMenu.addEventListener("click", closeMenu);
   isMenuOpen = true;
 }
 
-
 function closeMenu() {
   if (isMenuOpen) {
     mobileMenu.classList.toggle("left-active");
-    disappearMenu.classList.toggle("close-pause-active");
+    disappearMenu.classList.toggle("menu-active");
     isMenuOpen = false;
     rightSection.removeEventListener("click", closeMenu);
+
   }
 }
 
-if (window.innerWidth <= 800) {
-  sortingWindow.addEventListener("click", pauseOnMobile);
+function checkIfMobile(){
+  if (window.innerWidth <= 800) {
+    hamBurgerMenu.classList.toggle("hamburger-active");
+    sortingWindow.addEventListener("click", pauseOnMobile);
+  }
+  else{
+    hamBurgerMenu.hidden = true;
+    console.log("you reached else");
+  }
 }
 
 // Function to handle the pause button click

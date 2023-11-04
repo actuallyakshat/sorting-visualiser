@@ -10,14 +10,15 @@
   font-family: "Poppins", sans-serif;
 }
 
-html, body{
+html,
+body {
   padding: 0;
   margin: 0;
 }
-html{
+html {
   height: 100%;
 }
-body{
+body {
   min-height: 100%;
 }
 
@@ -55,7 +56,7 @@ body{
 }
 
 .left-section-dark {
-  border-right: 0.0625rem  solid rgba(255, 255, 255, 0.6);
+  border-right: 0.0625rem solid rgba(255, 255, 255, 0.6);
 }
 
 .menu-container {
@@ -146,9 +147,9 @@ body{
   width: 0.625rem;
   height: 0.625rem;
   background: #016a70;
-  border: 7px solid #016a70;
+  border: 0.4375rem solid #016a70;
   border-radius: 50%;
-  box-shadow: -407px 0 0 400px #38452a;
+  box-shadow: -25.4375rem 0 0 25rem #38452a;
   cursor: pointer;
 }
 
@@ -186,16 +187,12 @@ body{
   transition: opacity 0.5s;
 }
 
-.active {
-  opacity: 1;
-}
-
 .toggle-play button {
   cursor: pointer;
-  border-radius: 7px;
+  border-radius: 0.4375rem;
   border: none;
   width: 60%;
-  padding: 12px 17px;
+  padding: 0.75rem 1rem;
   transition: 0.2s;
   font-weight: 600;
   font-family: "Roboto Mono", monospace;
@@ -284,12 +281,12 @@ body{
 .legend-items div {
   height: 20px;
   width: 20px;
-  border: 0.0625rem  solid black;
+  border: 0.0625rem solid black;
   border-radius: 50%;
 }
 
 .legend-items p {
-  margin: 0px 15px 0 5px;
+  margin: 0px 1rem 0 0.3125rem;
 }
 
 .unsorted-legend {
@@ -340,10 +337,6 @@ body{
   transition: 0.3s;
 }
 
-.hamburger{
-  visibility: hidden;
-}
-
 .toggle-on {
   right: 0.2rem;
 }
@@ -368,9 +361,9 @@ body{
   font-family: "Roboto Mono", monospace;
   /* font-family: "Raleway Dots", sans-serif; */
   font-weight: bold;
-  position: relative;
+  position: absolute;
   z-index: 1000;
-  top: 20%;
+  top: 16%;
   left: 26%;
   color: white;
   opacity: 0.8;
@@ -384,7 +377,7 @@ body{
   width: 10%;
   width: 1rem;
   background-color: aliceblue;
-  margin: 0.0625rem ;
+  margin: 0.0625rem;
   transition: 0.3s all ease;
 }
 
@@ -409,12 +402,12 @@ body{
 }
 
 .cell {
-  border: 0.0625rem  solid black;
+  border: 0.0625rem solid black;
   transition: all 0.3s;
 }
 
 .dark-borders {
-  border: 0.0625rem  solid white;
+  border: 0.0625rem solid white;
 }
 
 .time-top {
@@ -430,7 +423,7 @@ body{
 
 .time th,
 .time td {
-  padding: 7px 5px;
+  padding: 0.4375rem 0.3125rem;
 }
 
 .time-details,
@@ -452,7 +445,7 @@ body{
 
 .space th,
 .space td {
-  padding: 7px 5px;
+  padding: 7px 0.3125rem;
 }
 
 .space-top-dark {
