@@ -13,6 +13,17 @@
     color: black;
     display: flex;
     gap: 3rem;
+    transform: translateX(-101%);
+    transition: transform 0.4s ease;
+  }
+
+  .left-active{
+    transform: translateX(0%);
+  }
+
+  .reset-button{
+    padding: 1.5rem;
+    width: 100%;
   }
 
   .cross {
@@ -23,7 +34,7 @@
   }
 
   .buttons-box{
-    margin-top: 3rem;
+    margin-top: 2rem;
     gap: 2rem;
   }
 
@@ -39,7 +50,7 @@
   }
 
   .parameters {
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .toggle-play {
@@ -71,6 +82,7 @@
     position: relative;
     left: 0.5rem;
     transform: scale(1.5);
+    z-index: 102;
   }
 
   .legend {

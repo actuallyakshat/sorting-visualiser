@@ -7,12 +7,32 @@ const sortingWindow = document.querySelector(".sorting-window");
 const pauseButton = document.querySelector(".pause");
 const playButton = document.querySelector(".play");
 const pauseStatus = document.querySelector(".pause-status");
+const mobileMenu = document.querySelector(".left-section");
+const rightSection = document.querySelector(".right-section");
+const hamburger = document.querySelector(".hamburger");
 
 generateArray();
 updateSpeed();
 let isSortingPaused = false; // Variable to track whether sorting is paused
 
-if(window.innerWidth<=800){
+hamburger.addEventListener("click", toggleMenu);
+
+let isMenuOpen = false;
+
+function toggleMenu() {
+  mobileMenu.classList.toggle("left-active");
+  rightSection.addEventListener("click", closeMenu);
+}
+
+function closeMenu() {
+  if (isMenuOpen) {
+    mobileMenu.classList.remove("left-active");
+    isMenuOpen = false;
+    rightSection.removeEventListener("click", closeMenu);
+  }
+}
+
+if (window.innerWidth <= 800) {
   sortingWindow.addEventListener("click", pauseOnMobile);
 }
 
@@ -23,11 +43,10 @@ function pauseSorting() {
   pauseStatus.innerText = "Paused...";
 }
 
-function pauseOnMobile(){
-  if(isSortingPaused){
+function pauseOnMobile() {
+  if (isSortingPaused) {
     playSorting();
-  }
-  else pauseSorting();
+  } else pauseSorting();
 }
 
 // Function to handle the play button click
@@ -114,6 +133,9 @@ function disableButtons() {
   sortingButtons.forEach((button) => {
     button.classList.add("btn-disable");
     button.disabled = true;
+    if (window.innerWidth <= 800) {
+      button.addEventListener("click", toggleMenu);
+    }
   });
 
   document.querySelector(".size-slider").disabled = true;
@@ -124,6 +146,9 @@ function enableButtons() {
   sortingButtons.forEach((button) => {
     button.disabled = false;
     button.classList.remove("btn-disable");
+        if (window.innerWidth <= 800) {
+      button.addEventListener("click", toggleMenu);
+    }
   });
   document.querySelector(".size-slider").disabled = false;
 }
