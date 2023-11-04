@@ -459,20 +459,3 @@
   font-style: italic;
   font-weight: 500;
 }
-
-.close-pause{
-  background-color: rgba(255, 0, 0, 0.2);
-  /* background-color: red; */
-  position: absolute;
-  top: -1rem;
-  right: 0;
-  width: 35%;
-  height: 110vh;
-  z-index: 105;
-  opacity: 1;
-  visibility: hidden;
-}
-
-.close-pause-active{
-  visibility: visible;
-}
