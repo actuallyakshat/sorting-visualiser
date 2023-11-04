@@ -16,7 +16,7 @@ thumb.addEventListener("click", toggle);
 function checkIfNight() {
   const currentTime = new Date();
   const currentHour = currentTime.getHours();
-  if (currentHour >= 18) {
+  if (currentHour >= 18 || currentHour <= 6) {
     toggle();
   }
 }

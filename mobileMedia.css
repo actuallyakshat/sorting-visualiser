@@ -17,11 +17,11 @@
     transition: transform 0.4s ease;
   }
 
-  .left-active{
+  .left-active {
     transform: translateX(0%);
   }
 
-  .reset-button{
+  .reset-button {
     padding: 1.5rem;
     width: 100%;
   }
@@ -33,7 +33,7 @@
     top: 2rem;
   }
 
-  .buttons-box{
+  .buttons-box {
     margin-top: 2rem;
     gap: 2rem;
   }
@@ -78,11 +78,10 @@
   }
 
   .hamburger {
-    visibility: visible;
-    position: relative;
-    left: 0.5rem;
+    position: absolute;
+    left: 3rem;
     transform: scale(1.5);
-    z-index: 102;
+    z-index: 1093;
   }
 
   .legend {
@@ -114,5 +113,21 @@
 
   .disc {
     display: none;
+  }
+
+  .close-pause {
+    background-color: rgba(255, 0, 0, 0.2);
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    width: 35%;
+    height: 100vh;
+    z-index: 105;
+    opacity: 1;
+    visibility: hidden;
+  }
+
+  .close-pause-active {
+    visibility: visible;
   }
 }

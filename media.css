@@ -1,7 +1,8 @@
 @media screen and (max-width: 1800px) {
   /* for the left section */
   .wrapper{
-    overflow-y: hidden;
+    height: 100vh;
+    overflow: hidden;
   }
   .title {
     margin-top: 0;
@@ -12,12 +13,10 @@
 
   .left-section {
     height: 105vh;
-    overflow: hidden;
   }
 
   .menu-container {
     position: relative;
-    /* top: 2rem; */
     gap: 1.75rem;
     justify-content: space-evenly;
     margin: auto 0;
@@ -70,14 +69,14 @@
 
 @media screen and (max-width: 1500px) {
 
-  body{
-    overflow-x: hidden;
+
+  .wrapper{
+    overflow-y: auto;
   }
 
   .left-section {
     height: 110vh;
     width: 27%;
-    overflow: hidden;
   }
 
   .title {
@@ -100,8 +99,7 @@
 @media screen and (max-width: 1200px) {
   /* for the left section */
   .wrapper {
-    height: fit-content;
-    /* overflow: hidden; */
+    
   }
 
   .title {
@@ -110,16 +108,22 @@
   #title-sorting {
     font-size: 2rem;
   }
+
+
+  .left-section{
+    height: fit-content;
+  }
+
   .menu-container {
     position: relative;
+    height: fit-content;
     transform: scale(0.9);
     gap: 1.75rem;
     justify-content: space-evenly;
-    margin: auto 0;
   }
 
-  .left-section {
-    height: auto;
+  :root{
+    overflow-x: hidden;
   }
 
   .disc {
@@ -187,26 +191,3 @@
     display: none;
   }
 }
-
-/* mobile */
-
-/* @media screen and (max-width: 850px) {
-  .wrapper {
-    height: 120vh;
-    overflow-x: hidden;
-  }
-
-
-  .container{
-    top: 5rem;
-    transform: scale(0.5);
-    position: relative;
-    height: 150vh;
-    width: 150vh;
-  }
-
-
-  .left-section{
-    display: none;
-  }
-} */
