@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorting Visualiser</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="scale.css" /> -->
+    <link rel="stylesheet" href="media.css" />
+    <link rel="stylesheet" href="mobileMedia.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -24,7 +27,7 @@
           </div>
 
           <div class="parameters">
-            <p style="font-weight: bold">Size of the array:</p>
+            <p class="size-text">Size of the array:</p>
             <input
               class="slider size-slider"
               onclick="generateArray()"
@@ -34,7 +37,7 @@
               value="40"
             />
 
-            <p style="font-weight: bold">Speed of the algorithm:</p>
+            <p class="speed-text">Speed of the algorithm:</p>
             <input
               class="slider speed-slider"
               type="range"
@@ -69,6 +72,9 @@
 
       <section class="right-section">
         <div class="container">
+          <div class="close-pause"></div>
+          <!-- <h3 class="mobile-heading" style="text-align: center; font-size:2rem;">Sorting Visualiser</h3> -->
+          <i class="fa-solid fa-bars-staggered hamburger" style="color: #ffffff;"></i>
           <div class="legend">
             <div class="legend-items">
               <div class="unsorted-legend"></div>
@@ -93,55 +99,56 @@
             </div>
           </div>
 
+          <div class="sorting-window" id="bars"></div>
           <p class="pause-status"></p>
-          <div class="sorting-window" id="bars">
-
-          </div>
-
           <div class="details">
-
-
             <div class="about-sort">
               <p class="sort-desc"></p>
             </div>
-
-            <table class="time">
-              <thead class="time-top">
-                <tr>
-                  <th class="cell">Time Complexity</th>
-                  <th class="cell">Best Case</th>
-                  <th class="cell">Average Case</th>
-                  <th class="cell">Worst Case</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="time-bottom">
-                  <td class="cell">Algorithm</td>
-                  <td class="cell"><div class="time-details"></div></td>
-                  <td class="cell"><div class="time-details"></div></td>
-                  <td class="cell"><div class="time-details"></div></td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <table class="space">
-              <thead class="space-top">
-                <tr>
-                  <th class="cell spaceComplex">Space Complexity</th>
-                  <th class="cell">Best Case</th>
-                  <th class="cell">Average Case</th>
-                  <th class="cell">Worst Case</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="space-bottom">
-                  <td class="cell">Algorithm</td>
-                  <td class="cell"><div class="space-details" id="space-box1"></div></td>
-                  <td class="cell"><div class="space-details" id="space-box2"></div></td>
-                  <td class="cell"><div class="space-details" id="space-box3"></div></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="tables">
+              <table class="time">
+                <thead class="time-top">
+                  <tr>
+                    <th class="cell">Time Complexity</th>
+                    <th class="cell">Best Case</th>
+                    <th class="cell">Average Case</th>
+                    <th class="cell">Worst Case</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="time-bottom">
+                    <td class="cell" style="font-weight: bold">Algorithm</td>
+                    <td class="cell"><div class="time-details">-</div></td>
+                    <td class="cell"><div class="time-details">-</div></td>
+                    <td class="cell"><div class="time-details">-</div></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="space">
+                <thead class="space-top">
+                  <tr>
+                    <th class="cell spaceComplex">Space Complexity</th>
+                    <th class="cell">Best Case</th>
+                    <th class="cell">Average Case</th>
+                    <th class="cell">Worst Case</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="space-bottom">
+                    <td class="cell" style="font-weight: bold">Algorithm</td>
+                    <td class="cell">
+                      <div class="space-details" id="space-box1">-</div>
+                    </td>
+                    <td class="cell">
+                      <div class="space-details" id="space-box2">-</div>
+                    </td>
+                    <td class="cell">
+                      <div class="space-details" id="space-box3">-</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <div class="disclaimer">
             <p class="disc">

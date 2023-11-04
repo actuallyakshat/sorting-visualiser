@@ -25,18 +25,19 @@
 }
 
 .wrapper {
-  height: 100vh;
-  width: 100%;
+  height: auto;
+  width: 100vw;
   background-color: var(--document-color);
   color: var(--font-color);
   display: flex;
   transition: background-color 0.5s, color 0.3s;
+  overflow-x: hidden;
 }
 
 .left-section {
   height: 100vh;
   width: 20%;
-  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-right: 0.0625rem solid rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,11 +45,11 @@
 }
 
 .left-section-dark {
-  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  border-right: 0.0625rem  solid rgba(255, 255, 255, 0.6);
 }
 
 .menu-container {
-  height: 93%;
+  height: 95%;
   margin: auto 0;
   /* background-color: red; */
   display: flex;
@@ -62,9 +63,6 @@
   margin-top: 0.5rem;
   font-size: 1.5rem;
   text-transform: uppercase;
-  /* position: absolute;
-  top: 3rem;
-  left: 5.5rem; */
 }
 
 #title-sorting {
@@ -82,21 +80,31 @@
 
 .parameters {
   margin: 10% auto 15% auto;
-  height: 200px;
-  width: 70%;
+  height: 12.5rem;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.2rem;
+}
+
+.speed-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.size-text {
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .reset-button {
   margin-top: 5%;
-  padding: 10px;
+  padding: 0.625rem;
   border: none;
   border-radius: 7px;
   background-color: #0c227b;
-  font-size: 15px;
+  font-size: 1rem;
   color: white;
   font-weight: 400;
   cursor: pointer;
@@ -107,7 +115,7 @@
 
 .reset-button:hover {
   background-color: #04103f;
-  box-shadow: 2px 2px 4px #04103f;
+  box-shadow: 0.125rem 0.125rem 0.25rem #04103f;
 }
 
 .slider {
@@ -115,18 +123,18 @@
   height: 10 px;
   background-color: #a2c579;
   outline: none;
-  border-radius: 15px;
+  border-radius: 1rem;
 }
 
 .slider::-webkit-slider-runnable-track {
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 
 .slider::-webkit-slider-thumb {
   appearance: none;
-  width: 10px;
-  height: 10px;
+  width: 0.625rem;
+  height: 0.625rem;
   background: #016a70;
   border: 7px solid #016a70;
   border-radius: 50%;
@@ -148,11 +156,11 @@
   border-radius: 7px;
   border: none;
   width: 60%;
-  padding: 10px;
+  padding: 0.625rem;
   transition: 0.2s;
   font-weight: 600;
   font-family: "Roboto Mono", monospace;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .toggle-play {
@@ -250,15 +258,15 @@
 
 .legend {
   height: 100px;
-  /* width: 100%; */
-  /* display: flex; */
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-content: flex-end;
   position: relative;
-  /* background-color: pink; */
 }
 
 .legend-items {
   display: flex;
-  /* display: inline-block; */
   position: absolute;
   top: 3.75rem;
 }
@@ -266,7 +274,7 @@
 .legend-items div {
   height: 20px;
   width: 20px;
-  border: 1px solid black;
+  border: 0.0625rem  solid black;
   border-radius: 50%;
 }
 
@@ -287,8 +295,7 @@
 }
 
 .toggle-switch {
-  position: absolute;
-  left: 93%;
+  left: 95%;
   top: 58%;
 }
 
@@ -308,7 +315,7 @@
 
 .moon {
   position: absolute;
-  top: 15px;
+  top: 14px;
   left: 9px;
 }
 
@@ -318,24 +325,28 @@
   background-color: var(--toggle-thumb);
   border-radius: 50%;
   position: absolute;
-  top: 2px;
-  left: 3px;
+  bottom: 0.1rem;
+  right: 2.2rem;
   transition: 0.3s;
 }
 
+.hamburger{
+  visibility: hidden;
+}
+
 .toggle-on {
-  left: 2.2rem;
+  right: 0.2rem;
 }
 
 .sorting-window {
   background-color: black;
-  height: 500px;
+  height: 31.25rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding-top: 100px;
   padding: 100px 1rem 0 1rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   margin-top: 0.75rem;
 }
 
@@ -344,14 +355,15 @@
 }
 
 .pause-status {
-  /* font-family: "Roboto Mono", monospace; */
-  font-family: "Raleway Dots", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  /* font-family: "Raleway Dots", sans-serif; */
   font-weight: bold;
-  position: absolute;
-  z-index: 100;
-  top: 12%;
+  position: relative;
+  z-index: 1000;
+  top: 20%;
   left: 26%;
   color: white;
+  opacity: 0.8;
 }
 
 .active {
@@ -362,7 +374,7 @@
   width: 10%;
   width: 1rem;
   background-color: aliceblue;
-  margin: 1px;
+  margin: 0.0625rem ;
   transition: 0.3s all ease;
 }
 
@@ -383,16 +395,16 @@
 }
 
 .spaceComplex {
-  width: 406px;
+  width: 32%;
 }
 
 .cell {
-  border: 1px solid black;
+  border: 0.0625rem  solid black;
   transition: all 0.3s;
 }
 
 .dark-borders {
-  border: 1px solid white;
+  border: 0.0625rem  solid white;
 }
 
 .time-top {
@@ -410,6 +422,12 @@
 .time td {
   padding: 7px 5px;
 }
+
+.time-details,
+.space-details {
+  text-align: center;
+}
+
 .space {
   border-collapse: collapse;
   min-width: 100%;
@@ -434,9 +452,27 @@
 .disc {
   font-family: "Roboto Mono", monospace;
   width: fit-content;
+  height: fit-content;
   position: absolute;
   bottom: 1%;
   right: 1%;
   font-style: italic;
   font-weight: 500;
+}
+
+.close-pause{
+  background-color: rgba(255, 0, 0, 0.2);
+  /* background-color: red; */
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  width: 35%;
+  height: 110vh;
+  z-index: 105;
+  opacity: 1;
+  visibility: hidden;
+}
+
+.close-pause-active{
+  visibility: visible;
 }

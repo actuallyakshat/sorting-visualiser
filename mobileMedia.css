@@ -1,0 +1,118 @@
+@media screen and (max-width: 600px) {
+  .wrapper {
+    height: 110vh;
+  }
+  .left-section {
+    display: block;
+    position: absolute;
+    z-index: 101;
+    background-color: beige;
+    height: max-content;
+    width: 30vh;
+    height: 110vh;
+    color: black;
+    display: flex;
+    gap: 3rem;
+    transform: translateX(-101%);
+    transition: transform 0.4s ease;
+  }
+
+  .left-active{
+    transform: translateX(0%);
+  }
+
+  .reset-button{
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .cross {
+    position: relative;
+    transform: scale(1.4);
+    left: 17.5rem;
+    top: 2rem;
+  }
+
+  .buttons-box{
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+
+  .buttons-box button {
+    width: 100%;
+    padding: 0.75rem 3.5rem;
+  }
+
+  .menu-container {
+    top: -3rem;
+    gap: 6rem;
+    width: 100%;
+  }
+
+  .parameters {
+    gap: 1rem;
+  }
+
+  .toggle-play {
+    visibility: hidden;
+  }
+
+  .right-section {
+    position: relative;
+    height: fit-content;
+  }
+
+  #title-sorting {
+    font-size: 3rem;
+  }
+
+  #title-visualiser {
+    font-size: 2rem;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    top: -4rem;
+    padding: 1rem;
+  }
+
+  .hamburger {
+    visibility: visible;
+    position: relative;
+    left: 0.5rem;
+    transform: scale(1.5);
+    z-index: 102;
+  }
+
+  .legend {
+    position: relative;
+    transform: scale(0.8);
+  }
+
+  .toggle-switch {
+    position: relative;
+  }
+
+  .sorting-window {
+    position: relative;
+    margin: 1rem auto;
+    max-width: 40vh;
+    height: 40vh;
+    /* width: 50vh; */
+  }
+
+  .tables {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .sort-desc {
+    font-size: 1rem;
+    display: block;
+  }
+
+  .disc {
+    display: none;
+  }
+}

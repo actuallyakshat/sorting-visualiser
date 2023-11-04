@@ -7,11 +7,38 @@ const sortingWindow = document.querySelector(".sorting-window");
 const pauseButton = document.querySelector(".pause");
 const playButton = document.querySelector(".play");
 const pauseStatus = document.querySelector(".pause-status");
-let visualisationStatus = false;
+const mobileMenu = document.querySelector(".left-section");
+const rightSection = document.querySelector(".right-section");
+const hamburger = document.querySelector(".hamburger");
+const disappearMenu = document.querySelector(".close-pause");
+
 generateArray();
 updateSpeed();
-
 let isSortingPaused = false; // Variable to track whether sorting is paused
+hamburger.addEventListener("click", openMenu);
+
+let isMenuOpen = false;
+
+function openMenu() {
+  mobileMenu.classList.toggle("left-active"); 
+  disappearMenu.classList.toggle("close-pause-active"); 
+  disappearMenu.addEventListener("click", closeMenu);
+  isMenuOpen = true;
+}
+
+
+function closeMenu() {
+  if (isMenuOpen) {
+    mobileMenu.classList.toggle("left-active");
+    disappearMenu.classList.toggle("close-pause-active");
+    isMenuOpen = false;
+    rightSection.removeEventListener("click", closeMenu);
+  }
+}
+
+if (window.innerWidth <= 800) {
+  sortingWindow.addEventListener("click", pauseOnMobile);
+}
 
 // Function to handle the pause button click
 function pauseSorting() {
@@ -20,6 +47,18 @@ function pauseSorting() {
   if (visualisationStatus) {
     pauseStatus.innerText = "Paused...";
   }
+}
+
+function pauseOnMobile() {
+  if (isSortingPaused) {
+    playSorting();
+  } else pauseSorting();
+}
+
+function pauseOnMobile() {
+  if (isSortingPaused) {
+    playSorting();
+  } else pauseSorting();
 }
 
 // Function to handle the play button click
@@ -135,6 +174,9 @@ function disableButtons() {
   sortingButtons.forEach((button) => {
     button.classList.add("btn-disable");
     button.disabled = true;
+    if (window.innerWidth <= 800) {
+      button.addEventListener("click", openMenu);
+    }
   });
 
   document.querySelector(".size-slider").disabled = true;
@@ -145,6 +187,9 @@ function enableButtons() {
   sortingButtons.forEach((button) => {
     button.disabled = false;
     button.classList.remove("btn-disable");
+        if (window.innerWidth <= 800) {
+      button.addEventListener("click", openMenu);
+    }
   });
   document.querySelector(".size-slider").disabled = false;
 }
