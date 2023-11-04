@@ -1,50 +1,106 @@
-@media screen and (max-width: 600px){
-    
-    /* .left-section{
-        display: block;
-    } */
+@media screen and (max-width: 600px) {
+  .wrapper {
+    height: 110vh;
+  }
+  .left-section {
+    display: block;
+    position: absolute;
+    z-index: 101;
+    background-color: beige;
+    height: max-content;
+    width: 30vh;
+    height: 110vh;
+    color: black;
+    display: flex;
+    gap: 3rem;
+  }
 
-    .right-section{
-        position: relative;
-        height: fit-content;
-    }
+  .cross {
+    position: relative;
+    transform: scale(1.4);
+    left: 17.5rem;
+    top: 2rem;
+  }
 
-    .container{
-        position: relative;
-        top: -3rem;
-    }
+  .buttons-box{
+    margin-top: 3rem;
+    gap: 2rem;
+  }
 
-    .legend{
-        left: -3rem;
-        position: relative;
-        transform: scale(0.8);
-    }
+  .buttons-box button {
+    width: 100%;
+    padding: 0.75rem 3.5rem;
+  }
 
-    .toggle-switch{
-        position: relative;
-    }
-    
-    .sorting-window{
-        position: relative;
-        left: -1rem;
-        top: 0;
-        max-width: 40vh;
-        width: 50vh;
-    }
+  .menu-container {
+    top: -3rem;
+    gap: 6rem;
+    width: 100%;
+  }
 
-    .tables{
-        position: relative;
-        flex-direction: column;
-    }
+  .parameters {
+    gap: 2rem;
+  }
 
-    .sort-desc{
-        font-size: 1rem;
-        display: block;
-        
-    }
+  .toggle-play {
+    visibility: hidden;
+  }
 
-    .disc{
-        display: none;
-    }
-    
+  .right-section {
+    position: relative;
+    height: fit-content;
+  }
+
+  #title-sorting {
+    font-size: 3rem;
+  }
+
+  #title-visualiser {
+    font-size: 2rem;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    top: -4rem;
+    padding: 1rem;
+  }
+
+  .hamburger {
+    visibility: visible;
+    position: relative;
+    left: 0.5rem;
+    transform: scale(1.5);
+  }
+
+  .legend {
+    position: relative;
+    transform: scale(0.8);
+  }
+
+  .toggle-switch {
+    position: relative;
+  }
+
+  .sorting-window {
+    position: relative;
+    margin: 1rem auto;
+    max-width: 40vh;
+    height: 40vh;
+    /* width: 50vh; */
+  }
+
+  .tables {
+    position: relative;
+    flex-direction: column;
+  }
+
+  .sort-desc {
+    font-size: 1rem;
+    display: block;
+  }
+
+  .disc {
+    display: none;
+  }
 }
