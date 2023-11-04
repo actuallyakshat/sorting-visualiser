@@ -15,10 +15,9 @@ const disappearMenu = document.querySelector(".close-pause");
 generateArray();
 updateSpeed();
 let isSortingPaused = false; // Variable to track whether sorting is paused
+
 hamburger.addEventListener("click", openMenu);
-
 let isMenuOpen = false;
-
 function openMenu() {
   mobileMenu.classList.toggle("left-active"); 
   disappearMenu.classList.toggle("close-pause-active"); 

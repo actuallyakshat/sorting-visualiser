@@ -1,6 +1,6 @@
 @media screen and (max-width: 1800px) {
   /* for the left section */
-  .wrapper{
+  .wrapper {
     height: 100vh;
     overflow: hidden;
   }
@@ -33,6 +33,7 @@
   }
   .buttons-box button {
     padding: 0.5rem;
+    font-size: 1rem;
   }
   .toggle-play button {
     padding: 10px 15px;
@@ -68,9 +69,7 @@
 }
 
 @media screen and (max-width: 1500px) {
-
-
-  .wrapper{
+  .wrapper {
     overflow-y: auto;
   }
 
@@ -83,7 +82,7 @@
     margin-top: 0;
   }
   #title-sorting {
-    font-size: 2rem;
+    font-size: 3.3rem;
   }
 
   .menu-container {
@@ -93,74 +92,55 @@
     margin: auto 0;
     /* background-color: red; */
   }
-
 }
 
 @media screen and (max-width: 1200px) {
   /* for the left section */
-  .wrapper {
-    
-  }
 
   .title {
     margin-top: 0;
   }
   #title-sorting {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
-
-  .left-section{
+  .left-section {
     height: fit-content;
   }
 
   .menu-container {
     position: relative;
-    height: fit-content;
+    height: 100%;
     transform: scale(0.9);
-    gap: 1.75rem;
+    gap: 3rem;
     justify-content: space-evenly;
-  }
-
-  :root{
-    overflow-x: hidden;
   }
 
   .disc {
     top: 1%;
     right: 1%;
-  }   
+  }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1070px) {
   /* for the left section */
-  .wrapper {
+
+  .left-section {
     height: fit-content;
   }
 
-  .title {
-    margin-top: 0;
-  }
-  #title-sorting {
-    font-size: 2rem;
-  }
   .menu-container {
-    height: fit-content;
     position: relative;
     transform: scale(0.8);
     gap: 3rem;
     justify-content: space-evenly;
-    margin: auto 0;
-  }
-  .left-section {
-    height: auto;
   }
 
-  .tables{
+  .tables {
     margin-top: 2rem;
   }
 
-  .pause-status{
+  .pause-status {
     top: 22%;
     left: 30%;
   }
@@ -172,22 +152,24 @@
 }
 
 /* tablet */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .wrapper {
-    height: 120vh;
+    height: fit-content;
     overflow-x: hidden;
   }
 
-
-  .right-section{
+  .right-section {
     top: 5rem;
     position: relative;
-    height: 150vh;
+    height: fit-content;
     width: 150vh;
   }
 
+  .disc {
+    display: none;
+  }
 
-  .left-section{
+  .left-section {
     display: none;
   }
 }

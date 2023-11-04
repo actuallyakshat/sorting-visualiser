@@ -1,19 +1,17 @@
-@media screen and (max-width: 600px) {
-  .wrapper {
-    height: 110vh;
-  }
+@media screen and (max-width: 768px) {
+
   .left-section {
     display: block;
     position: absolute;
-    z-index: 101;
+    z-index: 200;
     background-color: beige;
     height: max-content;
     width: 30vh;
-    height: 110vh;
+    height: 100%;
     color: black;
     display: flex;
     gap: 3rem;
-    transform: translateX(-101%);
+    /* transform: translateX(-101%); */
     transition: transform 0.4s ease;
   }
 
@@ -22,15 +20,10 @@
   }
 
   .reset-button {
-    padding: 1.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
     width: 100%;
-  }
-
-  .cross {
-    position: relative;
-    transform: scale(1.4);
-    left: 17.5rem;
-    top: 2rem;
+    font-size: 1rem;
   }
 
   .buttons-box {
@@ -44,13 +37,15 @@
   }
 
   .menu-container {
-    top: -3rem;
-    gap: 6rem;
+    margin: 0;
+    top: 0rem;
+    gap: 9rem;
     width: 100%;
+    transform: scale(0.7);
   }
 
   .parameters {
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .toggle-play {
@@ -59,7 +54,7 @@
 
   .right-section {
     position: relative;
-    height: fit-content;
+    height: 100%;
   }
 
   #title-sorting {
@@ -120,13 +115,12 @@
     position: absolute;
     top: -1rem;
     right: 0;
-    width: 35%;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 105;
     opacity: 1;
-    visibility: hidden;
+    /* visibility: hidden; */
   }
-
   .close-pause-active {
     visibility: visible;
   }
