@@ -73,10 +73,11 @@
     overflow-y: auto;
   }
 
-  .left-section {
-    height: auto;
+  /* .left-section {
+    min-height: 100vh;
+    height: 100%;
     width: 27%;
-  }
+  } */
 
   .title {
     margin-top: 0;
@@ -85,14 +86,15 @@
     font-size: 3.3rem;
   }
 
-  .menu-container {
+  /* .menu-container {
     position: relative;
+    top: 5rem;
     height: auto;
     gap: 1.75rem;
     justify-content: space-evenly;
     margin: auto 0;
-    /* background-color: red; */
-  }
+    background-color: red;
+  } */
 }
 
 @media screen and (max-width: 1200px) {
@@ -105,17 +107,19 @@
     font-size: 3rem;
   }
 
-  .left-section {
+  /* .left-section {
+    top: 3rem;
     height: auto;
-  }
+  } */
 
-  .menu-container {
+  /* .menu-container {
     position: relative;
     height: auto;
     transform: scale(0.9);
     gap: 3rem;
     justify-content: space-evenly;
-  }
+    background-color: red;
+  } */
 
   .disc {
     top: 1%;
