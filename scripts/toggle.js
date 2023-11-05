@@ -46,5 +46,11 @@ function toggle() {
     element.classList.toggle("dark-borders");
   });
 }
-
+if (window.innerWidth < 768) {
+  if (thumb.classList.contains("toggle-on")) {
+    moon.style.display = "inline-block";
+  } else {
+    sun.style.display = "inline-block";
+  }
+}
 checkIfNight();
