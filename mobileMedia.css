@@ -1,4 +1,6 @@
 @media screen and (max-width: 768px) {
+  
+  
   .left-section {
     display: block;
     position: absolute;
@@ -37,7 +39,7 @@
 
   .menu-container {
     margin: 0;
-    top: 0rem;
+    top: 3rem;
     gap: 9rem;
     width: 100%;
     transform: scale(0.7);
@@ -53,7 +55,7 @@
 
   .right-section {
     position: relative;
-    height: 100%;
+    height: auto;
   }
 
   #title-sorting {
@@ -67,8 +69,9 @@
   .container {
     position: relative;
     width: 100%;
-    top: -4rem;
+    top: 0rem;
     padding: 1rem;
+    margin: 0;
   }
 
   .hamburger {
