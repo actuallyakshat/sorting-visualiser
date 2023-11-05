@@ -304,6 +304,7 @@ body {
 .toggle-switch {
   left: 95%;
   top: 58%;
+  /* opacity: 0; */
 }
 
 .toggle-slider {
@@ -341,6 +342,18 @@ body {
   right: 0.2rem;
 }
 
+.toggle-button {
+  /* display: none; */
+  height: fit-content;
+  width: fit-content;
+  /* background-color: black; */
+}
+span .sun-s {
+  /* display: none; */
+}
+span .moon-s {
+  /* display: none; */
+}
 .sorting-window {
   background-color: black;
   height: 31.25rem;
