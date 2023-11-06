@@ -2,7 +2,7 @@
   /* for the left section */
   .wrapper {
     height: 100vh;
-    overflow: auto;
+    overflow-x: hidden;
   }
   .title {
     margin-top: 0;
@@ -73,7 +73,7 @@
 
 @media screen and (max-width: 1500px) {
   .wrapper {
-    overflow: auto;
+    overflow-y: auto;
   }
 
   .left-section {
