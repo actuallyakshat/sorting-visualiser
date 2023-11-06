@@ -12,8 +12,9 @@
     position: absolute;
     z-index: 200;
     background-color: beige;
-    height: 100%;
+    height: auto;
     width: 30vh;
+    height: auto;
     color: black;
     display: flex;
     gap: 0rem;
@@ -110,7 +111,7 @@
   .sorting-window {
     position: relative;
     margin: 1rem auto;
-    max-width: 40vh;
+    max-width: 100%;
     height: 40vh;
   }
 
