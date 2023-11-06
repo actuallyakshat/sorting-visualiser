@@ -1,6 +1,5 @@
-@media screen and (max-width: 768px) {
-
-  .wrapper{
+@media screen and (max-width: 769px) {
+  .wrapper {
     height: fit-content;
   }
 
@@ -82,7 +81,7 @@
     overflow: auto;
   }
 
-  .container{
+  .container {
     padding-top: 2rem;
   }
 
@@ -99,7 +98,7 @@
     z-index: 103;
     left: 1.5rem;
     transform: scale(1.5);
-    visibility: hidden;;
+    visibility: hidden;
   }
 
   .hamburger-active {
