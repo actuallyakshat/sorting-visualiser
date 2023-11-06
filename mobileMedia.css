@@ -1,11 +1,7 @@
 @media screen and (max-width: 768px) {
 
-  body, html{
-    height: auto;
-  }
-
   .wrapper{
-    height: 90%;
+    height: fit-content;
   }
 
   .left-section {
@@ -27,12 +23,29 @@
   }
 
   .menu-container {
+    opacity: 1;
     margin: 0;
     position: fixed;
     top: 0rem;
     gap: 2rem;
     width: 100%;
     transform: scale(0.7);
+  }
+
+  .mobile-menu {
+    background-color: rgba(255, 0, 0, 0.2);
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    width: 100%;
+    height: 110%;
+    height: inherit;
+    z-index: 105;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .menu-active {
+    visibility: visible;
   }
 
   .reset-button {
@@ -118,6 +131,7 @@
   .tables {
     position: relative;
     flex-direction: column;
+    margin-top: 5%;
   }
 
   .sort-desc {
@@ -129,21 +143,6 @@
     display: none;
   }
 
-  .mobile-menu {
-    background-color: rgba(255, 0, 0, 0.2);
-    position: absolute;
-    top: -1rem;
-    right: 0;
-    width: 100%;
-    min-height: 110%;
-    height: inherit;
-    z-index: 105;
-    opacity: 1;
-    visibility: hidden;
-  }
-  .menu-active {
-    visibility: visible;
-  }
   .toggle-switch {
     display: none;
   }
