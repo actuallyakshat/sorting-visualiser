@@ -1,6 +1,4 @@
 @media screen and (max-width: 768px) {
-  
-  
   .left-section {
     display: block;
     position: absolute;
@@ -79,6 +77,7 @@
     left: 1.5rem;
     transform: scale(1.5);
     visibility: hidden;
+    top: -2rem;
   }
 
   .hamburger-active {

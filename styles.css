@@ -349,10 +349,10 @@ body {
   /* background-color: black; */
 }
 span .sun-s {
-  /* display: none; */
+  display: none;
 }
 span .moon-s {
-  /* display: none; */
+  display: none;
 }
 .sorting-window {
   background-color: black;
@@ -474,4 +474,10 @@ span .moon-s {
   right: 1%;
   font-style: italic;
   font-weight: 500;
+}
+.hamburger {
+  position: absolute;
+  left: 1.5rem;
+  transform: scale(1.5);
+  visibility: hidden;
 }
