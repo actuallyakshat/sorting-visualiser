@@ -480,6 +480,7 @@ span .moon-s {
 .hamburger {
   position: absolute;
   left: 1.5rem;
+  top: 2rem;
   transform: scale(1.5);
   visibility: hidden;
 }
