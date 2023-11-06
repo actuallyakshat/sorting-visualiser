@@ -4,6 +4,7 @@ let arr = []; //we will work on this array
 let determineSpeed = document.querySelector(".speed-slider").value; //value from speed slider
 let arraySize = document.querySelector(".size-slider").value; //value from size slider
 const sortingWindow = document.querySelector(".sorting-window");
+const sortDesc = document.querySelector(".sort-desc");
 const pauseButton = document.querySelector(".pause");
 const playButton = document.querySelector(".play");
 const pauseStatus = document.querySelector(".pause-status");
@@ -11,12 +12,13 @@ const mobileMenu = document.querySelector(".left-section");
 const rightSection = document.querySelector(".right-section");
 const disappearMenu = document.querySelector(".mobile-menu");
 const hamBurgerMenu = document.querySelector(".hamburger");
+const pausePrompt = document.querySelector(".disc");
 
 checkIfMobile();
 generateArray();
 updateSpeed();
 let isSortingPaused = false; // Variable to track whether sorting is paused
-
+let isRunning = false;
 console.log(hamBurgerMenu);
 
 hamBurgerMenu.addEventListener("click", openMenu);
@@ -55,7 +57,15 @@ function checkIfMobile(){
 function pauseSorting() {
   pauseButton.style.backgroundColor = "#3d3d3d";
   isSortingPaused = true;
-  pauseStatus.innerText = "Paused...";
+  if(isRunning){
+    pauseStatus.innerText = "Paused...";
+    isRunning = false;
+  }
+}
+
+function activePausePrompt(){
+  pausePrompt.classList.add("disc-active");
+  console.log("called");
 }
 
 function pauseOnMobile() {
@@ -69,6 +79,7 @@ function playSorting() {
   pauseButton.style.backgroundColor = "#F0F0F0";
   pauseStatus.innerText = "";
   isSortingPaused = false;
+  isRunning = true;
   // Resume your sorting algorithm or animation logic here
 }
 
@@ -103,8 +114,11 @@ function waitforme(milisec) {
 //generate array function
 function generateArray() {
   enableButtons();
+  pausePrompt.style.visibility = "hidden";
+  sortDesc.innerText = "";
   arr = [];
   sortingWindow.innerHTML = "";
+  pauseStatus.innerText = "";
   arraySize = document.querySelector(".size-slider").value;
   for (let i = 0; i < arraySize; i++) {
     arr.push(Math.floor(Math.random() * 100 + 3));
@@ -145,11 +159,16 @@ function updateSpeed() {
 
 function disableButtons() {
   playAndPause.classList.add("active");
+  pausePrompt.style.visibility = "visible";
   sortingButtons.forEach((button) => {
     button.classList.add("btn-disable");
     button.disabled = true;
     if (window.innerWidth <= 800) {
       button.addEventListener("click", openMenu);
+    }
+    else{
+      console.log("about to call pauseprompt");
+      button.addEventListener("click", activePausePrompt);
     }
   });
 
@@ -158,6 +177,7 @@ function disableButtons() {
 
 function enableButtons() {
   playAndPause.classList.remove("active");
+  pausePrompt.style.visibility = "hidden";
   sortingButtons.forEach((button) => {
     button.disabled = false;
     button.classList.remove("btn-disable");

@@ -376,7 +376,7 @@ span .moon-s {
   font-weight: bold;
   position: absolute;
   z-index: 1000;
-  top: 16%;
+  top: 12%;
   left: 26%;
   color: white;
   opacity: 0.8;
@@ -384,6 +384,7 @@ span .moon-s {
 
 .active {
   opacity: 1;
+  visibility: visible;
 }
 
 .bar-style {
@@ -475,6 +476,7 @@ span .moon-s {
   font-style: italic;
   font-weight: 500;
 }
+
 .hamburger {
   position: absolute;
   left: 1.5rem;
