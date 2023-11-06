@@ -48,11 +48,9 @@ function toggle() {
 }
 if (window.innerWidth < 768) {
   if (thumb.classList.contains("toggle-on")) {
-    moon.style.display = "inline-block";
-    console.log("we are in if");
-  } else {
     sun.style.display = "inline-block";
-    console.log("we are in else");
+  } else {
+    moon.style.display = "inline-block";
   }
 }
 checkIfNight();

@@ -11,8 +11,8 @@ async function part(ele, l, h) {
       ++i;
       await shallWePause();
       swap(ele[i], ele[j]);
-      ele[i].style.background = "rgb(255, 115, 3)"; //Orange
-      if (i != j) ele[j].style.background = "salmon"; //Cyan------>Salmon
+      ele[i].style.background = "rgb(255, 0, 0)"; //Red
+      if (i != j) ele[j].style.background = "salmon"; //salmon
 
       await waitforme(animationSpeed);
     } else {
@@ -32,7 +32,7 @@ async function part(ele, l, h) {
     if (ele[j].style.background != "rgb(5, 250, 30)")
       //LightGreen
       // await shallWePause();
-      ele[j].style.background = "rgb(0, 255, 255)"; //Cyan
+      ele[j].style.background = "rgb(255, 255, 255)"; //white
   }
   return i;
 }
