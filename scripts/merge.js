@@ -8,14 +8,14 @@ async function merge(ele, l, m, h) {
   for (let i = 0; i < n1; ++i) {
     await waitforme(animationSpeed);
 
-    ele[l + i].style.background = "rgb(255, 115, 3)"; //Orange
+    ele[l + i].style.background = "rgb(255, 0, 0)"; //Red
     left[i] = ele[l + i].style.height;
   }
 
   //Right Side of the Array
   for (let i = 0; i < n2; ++i) {
     await waitforme(animationSpeed);
-    ele[m + 1 + i].style.background = "rgb(242, 255, 3)"; //Yellow
+    ele[m + 1 + i].style.background = "yellow"; //Yellow
     await shallWePause();
     right[i] = ele[m + 1 + i].style.height;
   }

@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorting Visualiser</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- <link rel="stylesheet" href="scale.css" /> -->
     <link rel="stylesheet" href="media.css" />
-    <link rel="stylesheet" href="mobileMedia.css">
+    <link rel="stylesheet" href="mobileMedia.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -72,8 +71,9 @@
 
       <section class="right-section">
         <div class="container">
+          <div class="mobile-menu"></div>
           <!-- <h3 class="mobile-heading" style="text-align: center; font-size:2rem;">Sorting Visualiser</h3> -->
-          <i class="fa-solid fa-bars-staggered hamburger" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-bars-staggered hamburger hamburger-visible"></i>
           <div class="legend">
             <div class="legend-items">
               <div class="unsorted-legend"></div>
@@ -81,7 +81,19 @@
               <div class="sorted-legend"></div>
               <p>Sorted</p>
               <div class="comparison-red-legend"></div>
+              <p style="margin-right: 0; margin-left: 0">&</p>
+              <div class="comparison-yellow-legend"></div>
               <p>Comparison</p>
+              <span class="toggle-button">
+                <i
+                  class="fa-regular fa-sun fa-lg sun-s"
+                  style="color: #323334"
+                ></i>
+                <i
+                  class="fa-regular fa-moon fa-lg moon-s"
+                  style="color: #ecedef"
+                ></i>
+              </span>
             </div>
             <div class="toggle-switch">
               <div class="toggle-slider">

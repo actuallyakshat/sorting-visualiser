@@ -2,7 +2,7 @@ async function selection() {
   const ele = document.querySelectorAll(".bar");
   for (let i = 0; i < ele.length; ++i) {
     let min_index = i;
-    ele[i].style.background = "rgb(255, 115, 3)"; //Orange
+    ele[i].style.background = "rgb(255, 0, 0)"; //Red
     for (let j = i + 1; j < ele.length; ++j) {
       ele[j].style.background = "rgb(242, 255, 3)"; //Yellow
       await waitforme(animationSpeed);
@@ -42,10 +42,11 @@ function playSelection() {
   updateSelectionSortDetails();
 }
 
-function updateSelectionSortDetails(){
+function updateSelectionSortDetails() {
   let data = document.querySelector(".sort-desc");
   data.style.opacity = "1";
-  data.innerText = "Selection sort is an in-place and unstable sorting algorithm."
+  data.innerText =
+    "Selection sort is an in-place and unstable sorting algorithm.";
 }
 
 function updateSelectionTime() {

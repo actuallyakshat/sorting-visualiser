@@ -1,7 +1,8 @@
 @media screen and (max-width: 1800px) {
   /* for the left section */
-  .wrapper{
-    overflow-y: hidden;
+  .wrapper {
+    height: 100vh;
+    overflow: hidden;
   }
   .title {
     margin-top: 0;
@@ -12,12 +13,10 @@
 
   .left-section {
     height: 105vh;
-    overflow: hidden;
   }
 
   .menu-container {
     position: relative;
-    /* top: 2rem; */
     gap: 1.75rem;
     justify-content: space-evenly;
     margin: auto 0;
@@ -34,6 +33,7 @@
   }
   .buttons-box button {
     padding: 0.5rem;
+    font-size: 1rem;
   }
   .toggle-play button {
     padding: 10px 15px;
@@ -69,96 +69,76 @@
 }
 
 @media screen and (max-width: 1500px) {
-
-  body{
-    overflow-x: hidden;
+  .wrapper {
+    overflow-y: auto;
   }
 
-  .left-section {
-    height: 110vh;
+  /* .left-section {
+    min-height: 100vh;
+    height: 100%;
     width: 27%;
-    overflow: hidden;
-  }
+  } */
 
   .title {
     margin-top: 0;
   }
   #title-sorting {
-    font-size: 2rem;
+    font-size: 3.3rem;
   }
 
-  .menu-container {
+  /* .menu-container {
     position: relative;
+    top: 5rem;
+    height: auto;
     gap: 1.75rem;
     justify-content: space-evenly;
     margin: auto 0;
-    /* background-color: red; */
-  }
-
+    background-color: red;
+  } */
 }
 
 @media screen and (max-width: 1200px) {
   /* for the left section */
-  .wrapper {
-    height: fit-content;
-    /* overflow: hidden; */
-  }
 
   .title {
     margin-top: 0;
   }
   #title-sorting {
-    font-size: 2rem;
-  }
-  .menu-container {
-    position: relative;
-    transform: scale(0.9);
-    gap: 1.75rem;
-    justify-content: space-evenly;
-    margin: auto 0;
+    font-size: 3rem;
   }
 
-  .left-section {
+  /* .left-section {
+    top: 3rem;
     height: auto;
-  }
+  } */
+
+  /* .menu-container {
+    position: relative;
+    height: auto;
+    transform: scale(0.9);
+    gap: 3rem;
+    justify-content: space-evenly;
+    background-color: red;
+  } */
 
   .disc {
     top: 1%;
     right: 1%;
-  }   
+  }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1070px) {
   /* for the left section */
-  .wrapper {
-    height: fit-content;
-  }
 
-  .title {
-    margin-top: 0;
-  }
-  #title-sorting {
-    font-size: 2rem;
-  }
   .menu-container {
-    height: fit-content;
     position: relative;
     transform: scale(0.8);
     gap: 3rem;
     justify-content: space-evenly;
-    margin: auto 0;
-  }
-  .left-section {
-    height: auto;
   }
 
-  .tables{
+  .tables {
     margin-top: 2rem;
-  }
-
-  .pause-status{
-    top: 22%;
-    left: 30%;
   }
 
   .disc {
@@ -168,45 +148,24 @@
 }
 
 /* tablet */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .wrapper {
-    height: 120vh;
+    height: fit-content;
     overflow-x: hidden;
   }
 
-
-  .right-section{
+  .right-section {
     top: 5rem;
     position: relative;
-    height: 150vh;
+    height: fit-content;
     width: 150vh;
   }
 
+  .disc {
+    display: none;
+  }
 
-  .left-section{
+  .left-section {
     display: none;
   }
 }
-
-/* mobile */
-
-/* @media screen and (max-width: 850px) {
-  .wrapper {
-    height: 120vh;
-    overflow-x: hidden;
-  }
-
-
-  .container{
-    top: 5rem;
-    transform: scale(0.5);
-    position: relative;
-    height: 150vh;
-    width: 150vh;
-  }
-
-
-  .left-section{
-    display: none;
-  }
-} */

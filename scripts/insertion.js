@@ -8,14 +8,14 @@ async function insertion() {
     let key = ele[i].style.height;
 
     shallWePause();
-    ele[i].style.background = "rgb(255, 115, 3)"; //orange
+    ele[i].style.background = "rgb(255, 0, 0)"; //red
 
     await waitforme(animationSpeed);
     await waitforme(animationSpeed);
 
     while (j >= 0 && parseInt(ele[j].style.height) > parseInt(key)) {
       await shallWePause();
-      ele[j].style.background = "rgb(242, 255, 3)"; //yellow
+      ele[j].style.background = "yellow"; //yellow
       ele[j].style.background = "yellow";
       ele[j + 1].style.height = ele[j].style.height;
       --j;
@@ -50,10 +50,11 @@ function playInsertion() {
   updateInsertionSortDetails();
 }
 
-function updateInsertionSortDetails(){
+function updateInsertionSortDetails() {
   let data = document.querySelector(".sort-desc");
   data.style.opacity = "1";
-  data.innerText = "Insertion sort is an in-place and stable sorting algorithm."
+  data.innerText =
+    "Insertion sort is an in-place and stable sorting algorithm.";
 }
 
 function updateInsertionTime() {
