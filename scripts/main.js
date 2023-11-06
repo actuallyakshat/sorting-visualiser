@@ -4,6 +4,7 @@ let arr = []; //we will work on this array
 let determineSpeed = document.querySelector(".speed-slider").value; //value from speed slider
 let arraySize = document.querySelector(".size-slider").value; //value from size slider
 const sortingWindow = document.querySelector(".sorting-window");
+const sortDesc = document.querySelector(".sort-desc");
 const pauseButton = document.querySelector(".pause");
 const playButton = document.querySelector(".play");
 const pauseStatus = document.querySelector(".pause-status");
@@ -11,20 +12,18 @@ const mobileMenu = document.querySelector(".left-section");
 const rightSection = document.querySelector(".right-section");
 const disappearMenu = document.querySelector(".mobile-menu");
 const hamBurgerMenu = document.querySelector(".hamburger");
-
+const pausePrompt = document.querySelector(".disc");
+var isRunning = false;
+let isSortingPaused = false;
 checkIfMobile();
 generateArray();
 updateSpeed();
-let isSortingPaused = false; // Variable to track whether sorting is paused
-
-console.log(hamBurgerMenu);
-
+pauseButton.addEventListener("click", updatePauseStatus);
 hamBurgerMenu.addEventListener("click", openMenu);
-
 let isMenuOpen = false;
 function openMenu() {
-  mobileMenu.classList.toggle("left-active"); 
-  disappearMenu.classList.toggle("menu-active"); 
+  mobileMenu.classList.toggle("left-active");
+  disappearMenu.classList.toggle("menu-active");
   hamBurgerMenu.classList.toggle("hamburger-visible");
   disappearMenu.addEventListener("click", closeMenu);
   isMenuOpen = true;
@@ -36,18 +35,15 @@ function closeMenu() {
     disappearMenu.classList.toggle("menu-active");
     isMenuOpen = false;
     rightSection.removeEventListener("click", closeMenu);
-
   }
 }
 
-function checkIfMobile(){
+function checkIfMobile() {
   if (window.innerWidth <= 800) {
     hamBurgerMenu.classList.toggle("hamburger-active");
     sortingWindow.addEventListener("click", pauseOnMobile);
-  }
-  else{
+  } else {
     hamBurgerMenu.hidden = true;
-    console.log("you reached else");
   }
 }
 
@@ -55,7 +51,16 @@ function checkIfMobile(){
 function pauseSorting() {
   pauseButton.style.backgroundColor = "#3d3d3d";
   isSortingPaused = true;
-  pauseStatus.innerText = "Paused...";
+}
+
+function updatePauseStatus() {
+  if (isRunning) {
+    pauseStatus.innerText = "Paused...";
+  }
+}
+
+function activePausePrompt() {
+  pausePrompt.classList.add("disc-active");
 }
 
 function pauseOnMobile() {
@@ -69,12 +74,10 @@ function playSorting() {
   pauseButton.style.backgroundColor = "#F0F0F0";
   pauseStatus.innerText = "";
   isSortingPaused = false;
-  // Resume your sorting algorithm or animation logic here
 }
 
 async function shallWePause() {
   if (isSortingPaused) {
-    // If sorting is paused, wait until it's unpaused
     while (isSortingPaused) {
       await new Promise((resolve) => setTimeout(resolve, 100)); // Adjust the delay as needed
     }
@@ -103,8 +106,12 @@ function waitforme(milisec) {
 //generate array function
 function generateArray() {
   enableButtons();
+  pausePrompt.style.visibility = "hidden";
+  isRunning = false;
+  sortDesc.innerText = "";
   arr = [];
   sortingWindow.innerHTML = "";
+  pauseStatus.innerText = "";
   arraySize = document.querySelector(".size-slider").value;
   for (let i = 0; i < arraySize; i++) {
     arr.push(Math.floor(Math.random() * 100 + 3));
@@ -144,12 +151,17 @@ function updateSpeed() {
 }
 
 function disableButtons() {
+  playAndPause.disabled = "false";
   playAndPause.classList.add("active");
+  pausePrompt.style.visibility = "visible";
+  isRunning = true;
   sortingButtons.forEach((button) => {
     button.classList.add("btn-disable");
     button.disabled = true;
     if (window.innerWidth <= 800) {
-      button.addEventListener("click", toggleMenu);
+      button.addEventListener("click", openMenu);
+    } else {
+      button.addEventListener("click", activePausePrompt);
     }
   });
 
@@ -158,11 +170,14 @@ function disableButtons() {
 
 function enableButtons() {
   playAndPause.classList.remove("active");
+  pausePrompt.style.visibility = "hidden";
+  isRunning = false;
+  playAndPause.disabled = true;
   sortingButtons.forEach((button) => {
     button.disabled = false;
     button.classList.remove("btn-disable");
-        if (window.innerWidth <= 800) {
-      button.addEventListener("click", toggleMenu);
+    if (window.innerWidth <= 800) {
+      button.addEventListener("click", openMenu);
     }
   });
   document.querySelector(".size-slider").disabled = false;
