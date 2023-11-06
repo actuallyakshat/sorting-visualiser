@@ -17,7 +17,8 @@
 
   .menu-container {
     position: relative;
-    gap: 3rem;
+    top: 2rem;
+    gap: 2rem;
     justify-content: space-evenly;
     margin: auto 0;
     /* background-color: red; */
@@ -76,6 +77,7 @@
   }
 
   .left-section {
+    top: 0rem;
     min-height: 100vh;
     height: max-content;
     width: 26%;
@@ -149,8 +151,7 @@
 
 /* tablet */
 @media screen and (max-width: 950px) {
-  
-  .wrapper{
+  .wrapper {
     height: 100%;
   }
 
