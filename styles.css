@@ -282,6 +282,7 @@ body {
 .legend-items div {
   height: 20px;
   width: 20px;
+  min-width: 20px;
   border: 0.0625rem solid black;
   border-radius: 50%;
 }
@@ -350,8 +351,8 @@ body {
 .toggle-button {
   height: fit-content;
   width: fit-content;
-  margin-right: 5rem;
-  justify-self: flex-end;
+  /* margin-right: 5rem; */
+  margin-left: auto;
 }
 span .sun-s {
   display: none;
@@ -413,7 +414,7 @@ span .moon-s {
 .time {
   border-collapse: collapse;
   min-width: 100%;
-  margin: 3rem 0 1rem 0;
+  margin: 1rem 0;
 }
 
 .spaceComplex {
