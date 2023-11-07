@@ -1,7 +1,6 @@
 @media screen and (max-width: 1800px) {
   /* for the left section */
   .wrapper {
-    height: 100vh;
     overflow-x: hidden;
   }
   .title {
@@ -12,11 +11,12 @@
   }
 
   .left-section {
-    height: 100vh;
+    height: auto;
   }
 
   .menu-container {
     position: relative;
+    height: max-content;
     top: 2rem;
     gap: 2rem;
     justify-content: space-evenly;
@@ -121,6 +121,7 @@
     transform: scale(0.9);
     gap: 3rem;
     justify-content: space-evenly;
+    /* background-color: red; */
   }
 
   .disc {
@@ -134,6 +135,7 @@
 
   .menu-container {
     position: relative;
+    height: max-content;
     transform: scale(0.8);
     gap: 3rem;
     justify-content: space-evenly;
