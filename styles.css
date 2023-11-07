@@ -376,9 +376,9 @@ span .moon-s {
   background-color: rgb(18, 18, 23);
 }
 
-.pause-status {
+/* .pause-status {
   font-family: "Roboto Mono", monospace;
-  /* font-family: "Raleway Dots", sans-serif; */
+  font-family: "Raleway Dots", sans-serif;
   font-weight: bold;
   position: absolute;
   z-index: 1000;
@@ -386,7 +386,7 @@ span .moon-s {
   left: 26%;
   color: white;
   opacity: 0.8;
-}
+} */
 
 .active {
   opacity: 1;

@@ -7,7 +7,7 @@ const sortingWindow = document.querySelector(".sorting-window");
 const sortDesc = document.querySelector(".sort-desc");
 const pauseButton = document.querySelector(".pause");
 const playButton = document.querySelector(".play");
-const pauseStatus = document.querySelector(".pause-status");
+// const pauseStatus = document.querySelector(".pause-status");
 const mobileMenu = document.querySelector(".left-section");
 const rightSection = document.querySelector(".right-section");
 const disappearMenu = document.querySelector(".mobile-menu");
@@ -18,7 +18,7 @@ let isSortingPaused = false;
 checkIfMobile();
 generateArray();
 updateSpeed();
-pauseButton.addEventListener("click", updatePauseStatus);
+// pauseButton.addEventListener("click", updatePauseStatus);
 hamBurgerMenu.addEventListener("click", openMenu);
 let isMenuOpen = false;
 function openMenu() {
@@ -53,11 +53,11 @@ function pauseSorting() {
   isSortingPaused = true;
 }
 
-function updatePauseStatus() {
-  if (isRunning) {
-    pauseStatus.innerText = "Paused...";
-  }
-}
+// function updatePauseStatus() {
+//   if (isRunning) {
+//     pauseStatus.innerText = "Paused...";
+//   }
+// }
 
 function activePausePrompt() {
   pausePrompt.classList.add("disc-active");
@@ -72,7 +72,7 @@ function pauseOnMobile() {
 // Function to handle the play button click
 function playSorting() {
   pauseButton.style.backgroundColor = "#F0F0F0";
-  pauseStatus.innerText = "";
+  // pauseStatus.innerText = "";
   isSortingPaused = false;
 }
 
@@ -111,7 +111,7 @@ function generateArray() {
   sortDesc.innerText = "";
   arr = [];
   sortingWindow.innerHTML = "";
-  pauseStatus.innerText = "";
+  // pauseStatus.innerText = "";
   arraySize = document.querySelector(".size-slider").value;
   for (let i = 0; i < arraySize; i++) {
     arr.push(Math.floor(Math.random() * 100 + 3));
